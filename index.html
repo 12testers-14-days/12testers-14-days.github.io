@@ -261,6 +261,57 @@ a:hover {
 }
 
 /* Header & Navigation */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.logo-svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.logo-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.by-text {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.acl-sublogo {
+  height: 54px;
+  width: auto;
+  opacity: 1;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: contain;
+}
 .site-header {
   position: sticky;
   top: 0;
@@ -278,50 +329,19 @@ a:hover {
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
-}
 
-.logo-text-group {
-  display: flex;
-  flex-direction: column;
-}
 
-.logo-text {
-  font-size: 1.15rem;
-  line-height: 1.1;
-  color: var(--text-main);
-}
 
-.logo-text strong {
-  font-weight: 800;
-  color: var(--text-main);
-}
 
-.logo-accent {
-  color: var(--brand-primary);
-  font-weight: 700;
-}
 
-.logo-byline {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 0.15rem;
-}
 
-.acl-sublogo {
-  height: 19px;
-  width: auto;
-  opacity: 1;
-  vertical-align: middle;
-  display: inline-block;
-}
+.logo-text strong { font-weight: 800; color: var(--text-main); }
+
+.logo-accent { color: var(--brand-primary); font-weight: 700; }
+
+
+
+
 
 .hero-cta-wrapper {
   background: linear-gradient(135deg, rgba(240, 249, 255, 0.85) 0%, rgba(224, 242, 254, 0.5) 50%, rgba(248, 250, 252, 0.95) 100%);
@@ -1005,6 +1025,15 @@ a:hover {
   .hero-cta-group .btn {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .acl-sublogo {
+    height: 38px;
+  }
+  .logo-text {
+    font-size: 1.1rem;
   }
 }
 
