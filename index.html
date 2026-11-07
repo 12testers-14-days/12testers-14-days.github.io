@@ -1,313 +1,600 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>12 Testers For 14 Days: Pass Google Play Closed Testing | Real Devices</title>
+
   <meta name="description" content="12 Testers For 14 Days: Meet Google Play's closed testing requirements with real Android testers. 100% money-back guarantee, zero dropouts, and guaranteed production access.">
+
   <link rel="canonical" href="https://12testers-14-days.github.io/">
+
   <meta name="robots" content="index, follow">
+
   
+
   <!-- OpenGraph Metadata -->
+
   <meta property="og:type" content="website">
+
   <meta property="og:title" content="12 Testers For 14 Days: Pass Google Play Closed Testing">
+
   <meta property="og:description" content="Meet Google Play's closed testing requirements with real Android testers. 100% money-back guarantee, zero dropouts, and guaranteed production access.">
+
   <meta property="og:url" content="https://12testers-14-days.github.io/">
+
   <meta property="og:site_name" content="12 Testers For 14 Days">
+
   <meta property="og:image" content="https://12testers-14-days.github.io/assets/og-image.svg">
 
+
+
   <!-- Twitter Metadata -->
+
   <meta name="twitter:card" content="summary_large_image">
+
   <meta name="twitter:title" content="12 Testers For 14 Days: Pass Google Play Closed Testing">
+
   <meta name="twitter:description" content="Meet Google Play's closed testing requirements with real Android testers. 100% money-back guarantee, zero dropouts, and guaranteed production access.">
+
   <meta name="twitter:image" content="https://12testers-14-days.github.io/assets/og-image.svg">
 
+
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
   
+
   <style>
+
 /* ==========================================================================
+
    12 Testers For 14 Days - Modern SaaS Light Theme
+
    ========================================================================== */
 
+
+
 :root {
+
   --bg-primary: #ffffff;
+
   --bg-alt: #f8fafc;
+
   --bg-card: #ffffff;
+
   --bg-card-subtle: #f1f5f9;
+
   
+
   --text-main: #0f172a;
+
   --text-body: #334155;
+
   --text-muted: #64748b;
+
   --text-light: #94a3b8;
+
   
+
   --border-color: #e2e8f0;
+
   --border-light: #f1f5f9;
+
   --border-focus: #38bdf8;
+
   
+
   --brand-primary: #0284c7;
+
   --brand-hover: #0369a1;
+
   --brand-light: #e0f2fe;
+
   
+
   --accent-green: #16a34a;
+
   --accent-green-light: #dcfce7;
+
   
+
   --accent-amber: #d97706;
+
   --accent-amber-light: #fef3c7;
+
   
+
   --accent-rose: #e11d48;
+
   --accent-rose-light: #ffe4e6;
+
   
+
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+
   
+
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
   --font-mono: 'JetBrains Mono', monospace;
+
   
+
   --radius-sm: 0.375rem;
+
   --radius-md: 0.625rem;
+
   --radius-lg: 1rem;
+
   --radius-full: 9999px;
+
   
+
   --container-max: 1200px;
+
 }
+
+
 
 *, *::before, *::after {
+
   box-sizing: border-box;
+
   margin: 0;
+
   padding: 0;
+
 }
+
+
 
 html {
+
   font-family: var(--font-sans);
+
   font-size: 16px;
+
   line-height: 1.6;
+
   color: var(--text-body);
+
   background-color: var(--bg-primary);
+
   scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
+
 }
+
+
 
 body {
+
   background-color: var(--bg-primary);
+
   color: var(--text-body);
+
   overflow-x: hidden;
+
 }
+
+
 
 /* Container */
+
 .container {
+
   width: 100%;
+
   max-width: var(--container-max);
+
   margin-left: auto;
+
   margin-right: auto;
+
   padding-left: 1.5rem;
+
   padding-right: 1.5rem;
+
 }
+
+
 
 /* Typography */
+
 h1, h2, h3, h4, h5, h6 {
+
   color: var(--text-main);
+
   font-weight: 700;
+
   line-height: 1.25;
+
   letter-spacing: -0.02em;
+
 }
+
+
 
 h1 {
+
   font-size: clamp(2.25rem, 5vw, 3.5rem);
+
   font-weight: 800;
+
   letter-spacing: -0.03em;
+
   margin-bottom: 1.25rem;
+
   line-height: 1.15;
+
 }
+
+
 
 h2 {
+
   font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+
   font-weight: 800;
+
   margin-bottom: 0.85rem;
+
   line-height: 1.2;
+
 }
+
+
 
 h3 {
+
   font-size: 1.25rem;
+
   font-weight: 700;
+
   margin-bottom: 0.5rem;
+
 }
+
+
 
 p {
+
   color: var(--text-body);
+
   font-size: 1rem;
+
   line-height: 1.65;
+
 }
+
+
 
 a {
+
   color: var(--brand-primary);
+
   text-decoration: none;
+
   transition: color 0.2s ease;
+
 }
+
+
 
 a:hover {
+
   color: var(--brand-hover);
+
 }
+
+
 
 /* Badges */
+
 .badge {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.4rem;
+
   font-size: 0.8125rem;
+
   font-weight: 600;
+
   padding: 0.35rem 0.85rem;
+
   border-radius: var(--radius-full);
+
   background-color: var(--brand-light);
+
   color: var(--brand-hover);
+
   border: 1px solid #bae6fd;
+
   margin-bottom: 0.85rem;
+
   letter-spacing: 0.01em;
+
 }
+
+
 
 .badge-success {
+
   background-color: var(--accent-green-light);
+
   color: #15803d;
+
   border-color: #bbf7d0;
+
 }
+
+
 
 .badge-amber {
+
   background-color: var(--accent-amber-light);
+
   color: #b45309;
+
   border-color: #fde68a;
+
 }
+
+
 
 .pulse-dot {
+
   width: 7px;
+
   height: 7px;
+
   background-color: var(--brand-primary);
+
   border-radius: 50%;
+
   box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+
   display: inline-block;
+
 }
+
+
 
 .pulse-dot-green {
+
   background-color: var(--accent-green);
+
   box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+
 }
+
+
 
 /* Buttons */
+
 .btn {
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 0.5rem;
+
   font-size: 0.95rem;
+
   font-weight: 600;
+
   padding: 0.75rem 1.4rem;
+
   border-radius: var(--radius-md);
+
   border: 1px solid transparent;
+
   cursor: pointer;
+
   transition: all 0.2s ease;
+
   text-decoration: none;
+
   line-height: 1;
+
 }
+
+
 
 .btn-primary {
+
   background-color: var(--brand-primary);
+
   color: #ffffff !important;
+
   box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+
 }
+
+
 
 .btn-primary:hover {
+
   background-color: var(--brand-hover);
+
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+
   transform: translateY(-1px);
+
 }
+
+
 
 .btn-outline {
+
   background-color: #ffffff;
+
   color: var(--text-main) !important;
+
   border-color: var(--border-color);
+
   box-shadow: var(--shadow-sm);
+
 }
+
+
 
 .btn-outline:hover {
+
   background-color: var(--bg-alt);
+
   border-color: #cbd5e1;
+
   color: var(--brand-primary) !important;
+
   transform: translateY(-1px);
+
 }
+
+
 
 .btn-whatsapp {
+
   background-color: var(--accent-green);
+
   color: #ffffff !important;
+
   box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+
 }
+
+
 
 .btn-whatsapp:hover {
+
   background-color: #15803d;
+
   box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+
   transform: translateY(-1px);
+
 }
+
+
 
 .btn-lg {
+
   padding: 0.9rem 1.65rem;
+
   font-size: 1rem;
+
 }
+
+
 
 .btn-sm {
+
   padding: 0.5rem 0.9rem;
+
   font-size: 0.85rem;
+
 }
 
-/* Header & Navigation */
+
+
+/* Header & Brand Logo Modern Styling */
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.96;
 }
 
 .logo-svg {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
+  border-radius: 10px;
+  filter: drop-shadow(0 3px 8px rgba(37, 99, 235, 0.22));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+}
+
+.logo:hover .logo-svg {
+  transform: translateY(-1.5px) scale(1.03);
+  filter: drop-shadow(0 6px 14px rgba(37, 99, 235, 0.32));
 }
 
 .logo-text-group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .logo-text {
-  font-size: 1.15rem;
-  line-height: 1.1;
-  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  line-height: 1.15;
+  letter-spacing: -0.028em;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32rem;
 }
 
 .logo-text strong {
   font-weight: 800;
-  color: var(--text-main);
+  color: #0f172a;
+  letter-spacing: -0.03em;
 }
 
 .logo-accent {
-  color: var(--brand-primary);
-  font-weight: 700;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 52%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.025em;
 }
 
 .logo-byline {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 0.15rem;
+  gap: 0.4rem;
+  margin-top: 0.18rem;
 }
 
 .by-text {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  line-height: 1;
 }
 
 .acl-sublogo {
@@ -317,36 +604,74 @@ a:hover {
   vertical-align: middle;
   display: inline-block;
   object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04));
+  transition: transform 0.2s ease;
 }
 
+.logo:hover .acl-sublogo {
+  transform: scale(1.02);
+}
 
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 420px) {
+  .logo-text {
+    font-size: 1.05rem;
+  }
+  .acl-sublogo {
+    height: 34px;
+  }
+  .logo-svg {
+    width: 34px;
+    height: 34px;
+  }
+}
 
 .site-header {
+
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
+
   background-color: rgba(255, 255, 255, 0.96);
+
   backdrop-filter: blur(12px);
+
   -webkit-backdrop-filter: blur(12px);
+
   border-bottom: 1px solid var(--border-color);
+
   padding: 0.85rem 0;
+
 }
 
+
+
 .nav-wrap {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -363,2073 +688,4124 @@ a:hover {
 
 
 .hero-cta-wrapper {
+
   background: linear-gradient(135deg, rgba(240, 249, 255, 0.85) 0%, rgba(224, 242, 254, 0.5) 50%, rgba(248, 250, 252, 0.95) 100%);
+
   border: 1px solid rgba(186, 230, 253, 0.8);
+
   border-radius: var(--radius-lg);
+
   padding: 1.35rem 1.5rem;
+
   box-shadow: 0 4px 20px -2px rgba(2, 132, 199, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+
   margin-bottom: 2rem;
+
   backdrop-filter: blur(8px);
+
   -webkit-backdrop-filter: blur(8px);
+
 }
+
+
 
 .hero-cta-note {
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
   font-size: 0.825rem;
+
   color: var(--text-muted);
+
   font-weight: 500;
+
   margin-top: 0.85rem;
+
 }
+
+
 
 .main-nav {
+
   display: flex;
+
   align-items: center;
+
   gap: 2rem;
+
 }
+
+
 
 .nav-list {
+
   display: flex;
+
   align-items: center;
+
   list-style: none;
+
   gap: 1.5rem;
+
 }
+
+
 
 .nav-link {
+
   font-size: 0.925rem;
+
   font-weight: 500;
+
   color: var(--text-body);
+
   transition: color 0.15s ease;
+
   position: relative;
+
   padding: 0.25rem 0;
+
 }
+
+
 
 .nav-link:hover,
+
 .nav-link.active {
+
   color: var(--brand-primary);
+
   font-weight: 600;
+
 }
+
+
 
 .mobile-menu-toggle {
+
   display: none;
+
   background: none;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-sm);
+
   padding: 0.4rem;
+
   cursor: pointer;
+
   color: var(--text-main);
+
 }
+
+
 
 /* Sections */
+
 .section {
+
   padding: 5rem 0;
+
 }
+
+
 
 .section-alt {
+
   background-color: var(--bg-alt);
+
 }
+
+
 
 .section-header {
+
   max-width: 750px;
+
   margin: 0 auto 3rem auto;
+
 }
+
+
 
 .section-header.text-center {
+
   text-align: center;
+
 }
+
+
 
 .section-lead {
+
   font-size: 1.125rem;
+
   color: var(--text-muted);
+
   line-height: 1.65;
+
   margin-top: 0.5rem;
+
 }
+
+
 
 /* Cards */
+
 .card {
+
   background-color: var(--bg-card);
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   box-shadow: var(--shadow-sm);
+
   transition: all 0.25s ease;
+
 }
+
+
 
 .card:hover {
+
   box-shadow: var(--shadow-md);
+
   border-color: #cbd5e1;
+
 }
+
+
 
 /* Hero Section */
+
 .hero {
+
   position: relative;
+
   padding: 5rem 0 4.5rem;
+
   background: 
+
     radial-gradient(circle at 12% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+
     radial-gradient(circle at 88% 75%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+
     linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 35%, #f8fafc 70%, #ffffff 100%);
+
   border-bottom: 1px solid #e2e8f0;
+
   overflow: hidden;
+
 }
 
+
+
 .hero::before {
+
   content: "";
+
   position: absolute;
+
   top: 0;
+
   left: 0;
+
   right: 0;
+
   bottom: 0;
+
   background-image: 
+
     linear-gradient(to right, rgba(2, 132, 199, 0.035) 1px, transparent 1px),
+
     linear-gradient(to bottom, rgba(2, 132, 199, 0.035) 1px, transparent 1px);
+
   background-size: 36px 36px;
+
   pointer-events: none;
+
   mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
+
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
+
 }
+
+
 
 .hero-grid {
+
   display: grid;
+
   grid-template-columns: 1.15fr 0.85fr;
+
   gap: 3.5rem;
+
   align-items: center;
+
 }
+
+
 
 .hero-lead {
+
   font-size: 1.15rem;
+
   color: var(--text-body);
+
   line-height: 1.7;
+
   margin-bottom: 2rem;
+
 }
+
+
 
 .hero-cta-group {
+
   display: flex;
+
   align-items: center;
+
   gap: 1rem;
+
   flex-wrap: wrap;
+
   margin-bottom: 2rem;
+
 }
+
+
 
 .hero-trust-bar {
+
   display: flex;
+
   align-items: center;
+
   gap: 1.75rem;
+
   flex-wrap: wrap;
+
   padding-top: 1.5rem;
+
   border-top: 1px solid rgba(186, 230, 253, 0.7);
+
 }
+
+
 
 .trust-item {
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
   font-size: 0.875rem;
+
   color: var(--text-muted);
+
 }
+
+
 
 .trust-item strong {
+
   color: var(--text-main);
+
 }
+
+
 
 /* Hero Sidebar Card */
+
 .hero-card {
+
   background: #ffffff;
+
   border: 1px solid rgba(186, 230, 253, 0.85);
+
   border-radius: var(--radius-lg);
+
   padding: 2.25rem 2rem;
+
   box-shadow: 0 12px 32px -4px rgba(2, 132, 199, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+
   position: relative;
+
 }
+
+
 
 .card-header-badge {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.4rem;
+
   font-size: 0.775rem;
+
   font-weight: 700;
+
   text-transform: uppercase;
+
   letter-spacing: 0.05em;
+
   color: #15803d;
+
   background-color: var(--accent-green-light);
+
   padding: 0.25rem 0.65rem;
+
   border-radius: var(--radius-full);
+
   margin-bottom: 1rem;
+
 }
+
+
 
 .dot-live {
+
   width: 6px;
+
   height: 6px;
+
   background-color: var(--accent-green);
+
   border-radius: 50%;
+
 }
+
+
 
 .hero-feature-list {
+
   list-style: none;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 0.85rem;
+
   margin-bottom: 1.5rem;
+
 }
+
+
 
 .hero-feature-list li {
+
   display: flex;
+
   align-items: flex-start;
+
   gap: 0.75rem;
+
   font-size: 0.95rem;
+
   color: var(--text-body);
+
   line-height: 1.5;
+
 }
+
+
 
 .hero-feature-list li svg {
+
   flex-shrink: 0;
+
   margin-top: 0.2rem;
+
   color: var(--accent-green);
+
 }
+
+
 
 .hero-price-strip {
+
   background-color: var(--bg-alt);
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-md);
+
   padding: 1rem 1.25rem;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
 }
+
+
 
 /* Stats Grid */
+
 .stats-grid {
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 1.5rem;
+
 }
+
+
 
 .stat-card {
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   padding: 2rem 1.5rem;
+
   text-align: center;
+
   box-shadow: var(--shadow-sm);
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
+
+
 
 .stat-card:hover {
+
   transform: translateY(-2px);
+
   box-shadow: var(--shadow-md);
+
 }
+
+
 
 .stat-number {
+
   display: block;
+
   font-size: clamp(2rem, 3.5vw, 2.75rem);
+
   font-weight: 800;
+
   color: var(--brand-primary);
+
   line-height: 1.1;
+
   font-family: var(--font-mono);
+
   margin-bottom: 0.5rem;
+
 }
+
+
 
 .stat-label {
+
   display: block;
+
   font-size: 1rem;
+
   font-weight: 700;
+
   color: var(--text-main);
+
   margin-bottom: 0.35rem;
+
 }
+
+
 
 .stat-sub {
+
   font-size: 0.875rem;
+
   color: var(--text-muted);
+
   line-height: 1.45;
+
 }
+
+
 
 /* Comparison Boxes */
+
 .compare-grid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.75rem;
+
 }
+
+
 
 .compare-card {
+
   padding: 2.25rem 1.75rem;
+
   border-radius: var(--radius-lg);
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   box-shadow: var(--shadow-sm);
+
   display: flex;
+
   flex-direction: column;
+
 }
+
+
 
 .compare-card.recommended {
+
   border: 2px solid var(--brand-primary);
+
   box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+
   position: relative;
+
 }
+
+
 
 .compare-list {
+
   list-style: none;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 0.85rem;
+
   margin-top: 1.5rem;
+
   font-size: 0.925rem;
+
 }
+
+
 
 .compare-list li {
+
   display: flex;
+
   align-items: flex-start;
+
   gap: 0.65rem;
+
   line-height: 1.5;
+
 }
+
+
 
 /* Timeline Steps (How It Works) */
+
 .steps-grid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.75rem;
+
 }
+
+
 
 .step-card {
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   padding: 2rem 1.75rem;
+
   box-shadow: var(--shadow-sm);
+
   transition: all 0.2s ease;
+
   position: relative;
+
 }
+
+
 
 .step-card:hover {
+
   box-shadow: var(--shadow-md);
+
   border-color: #cbd5e1;
+
   transform: translateY(-2px);
+
 }
+
+
 
 .step-num {
+
   font-size: 2rem;
+
   font-weight: 800;
+
   color: var(--brand-primary);
+
   font-family: var(--font-mono);
+
   margin-bottom: 0.75rem;
+
   line-height: 1;
+
 }
+
+
 
 /* Reviews Grid */
+
 .reviews-grid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1.75rem;
+
 }
+
+
 
 .review-card {
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   padding: 2rem;
+
   box-shadow: var(--shadow-sm);
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
+
 }
+
+
 
 .review-header {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   margin-bottom: 1rem;
+
 }
+
+
 
 .review-quote {
+
   font-size: 0.95rem;
+
   line-height: 1.65;
+
   color: var(--text-body);
+
   margin-bottom: 1.5rem;
+
   font-style: normal;
+
 }
+
+
 
 .reviewer-name {
+
   font-size: 0.925rem;
+
   font-weight: 700;
+
   color: var(--text-main);
+
 }
+
+
 
 /* Pricing Grid */
+
 .pricing-grid {
+
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 2rem;
+
   max-width: 860px;
+
   margin: 0 auto;
+
 }
+
+
 
 .pricing-card {
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   padding: 2.5rem 2rem;
+
   box-shadow: var(--shadow-sm);
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
+
   position: relative;
+
 }
+
+
 
 .pricing-card.featured {
+
   border: 2px solid var(--brand-primary);
+
   box-shadow: 0 12px 30px rgba(2, 132, 199, 0.15);
+
 }
+
+
 
 .pricing-badge {
+
   position: absolute;
+
   top: -13px;
+
   right: 24px;
+
   background-color: var(--brand-primary);
+
   color: #ffffff;
+
   font-size: 0.75rem;
+
   font-weight: 700;
+
   text-transform: uppercase;
+
   letter-spacing: 0.05em;
+
   padding: 0.25rem 0.75rem;
+
   border-radius: var(--radius-full);
+
 }
+
+
 
 .price-val {
+
   font-size: 3rem;
+
   font-weight: 800;
+
   color: var(--text-main);
+
   line-height: 1;
+
 }
+
+
 
 .price-sub {
+
   font-size: 0.9rem;
+
   color: var(--text-muted);
+
 }
+
+
 
 .pricing-features {
+
   list-style: none;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 0.85rem;
+
   margin: 1.75rem 0 2rem;
+
   font-size: 0.95rem;
+
 }
+
+
 
 .pricing-features li {
+
   display: flex;
+
   align-items: flex-start;
+
   gap: 0.65rem;
+
   line-height: 1.5;
+
 }
+
+
 
 /* FAQs */
+
 .faq-list {
+
   max-width: 820px;
+
   margin: 0 auto;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 1rem;
+
 }
+
+
 
 .faq-item {
+
   background: #ffffff;
+
   border: 1px solid var(--border-color);
+
   border-radius: var(--radius-md);
+
   box-shadow: var(--shadow-sm);
+
   transition: all 0.2s ease;
+
   overflow: hidden;
+
 }
+
+
 
 .faq-item[open] {
+
   border-color: #93c5fd;
+
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+
 }
+
+
 
 .faq-item summary {
+
   padding: 1.25rem 1.5rem;
+
   font-size: 1.05rem;
+
   font-weight: 700;
+
   color: var(--text-main);
+
   cursor: pointer;
+
   list-style: none;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   user-select: none;
+
 }
+
+
 
 .faq-item summary::-webkit-details-marker {
+
   display: none;
+
 }
+
+
 
 .faq-item summary::after {
+
   content: "+";
+
   font-size: 1.35rem;
+
   font-weight: 600;
+
   color: var(--brand-primary);
+
   transition: transform 0.2s ease;
+
   line-height: 1;
+
 }
+
+
 
 .faq-item[open] summary::after {
+
   content: "−";
+
   color: var(--brand-hover);
+
 }
+
+
 
 .faq-body {
+
   padding: 0 1.5rem 1.35rem;
+
   color: var(--text-body);
+
   font-size: 0.975rem;
+
   line-height: 1.7;
+
 }
+
+
 
 /* Footer */
+
 .site-footer {
+
   background-color: var(--bg-alt);
+
   border-top: 1px solid var(--border-color);
+
   padding: 4.5rem 0 2.5rem;
+
   color: var(--text-body);
+
 }
+
+
 
 .footer-grid {
+
   display: grid;
+
   grid-template-columns: 2fr 1fr 1fr 1.25fr;
+
   gap: 3rem;
+
   margin-bottom: 3.5rem;
+
 }
+
+
 
 .footer-desc {
+
   color: var(--text-muted);
+
   font-size: 0.925rem;
+
   line-height: 1.65;
+
   margin-top: 1rem;
+
   max-width: 340px;
+
 }
+
+
 
 .footer-heading {
+
   font-size: 0.95rem;
+
   font-weight: 700;
+
   color: var(--text-main);
+
   text-transform: uppercase;
+
   letter-spacing: 0.05em;
+
   margin-bottom: 1.25rem;
+
 }
+
+
 
 .footer-links {
+
   list-style: none;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 0.75rem;
+
 }
+
+
 
 .footer-links a {
+
   color: var(--text-muted);
+
   font-size: 0.925rem;
+
   transition: color 0.15s ease;
+
 }
+
+
 
 .footer-links a:hover {
+
   color: var(--brand-primary);
+
 }
+
+
 
 .footer-bottom {
+
   padding-top: 2rem;
+
   border-top: 1px solid var(--border-color);
+
   text-align: center;
+
   font-size: 0.875rem;
+
   color: var(--text-muted);
+
 }
+
+
 
 /* Responsive Breakpoints */
+
 @media (max-width: 1024px) {
+
   .hero-grid {
+
     grid-template-columns: 1fr;
+
     gap: 2.5rem;
+
   }
+
   .stats-grid {
+
     grid-template-columns: repeat(2, 1fr);
+
   }
+
   .compare-grid,
+
   .steps-grid,
+
   .reviews-grid {
+
     grid-template-columns: repeat(2, 1fr);
+
   }
+
   .footer-grid {
+
     grid-template-columns: 1fr 1fr;
+
     gap: 2rem;
+
   }
+
 }
+
+
 
 @media (max-width: 768px) {
+
   .mobile-menu-toggle {
+
     display: block;
+
   }
+
   
+
   .main-nav {
+
     display: none;
+
     position: absolute;
+
     top: 100%;
+
     left: 0;
+
     right: 0;
+
     background-color: #ffffff;
+
     border-bottom: 1px solid var(--border-color);
+
     box-shadow: var(--shadow-lg);
+
     padding: 1.5rem;
+
     flex-direction: column;
+
     align-items: stretch;
+
     gap: 1.25rem;
+
   }
+
   
+
   .main-nav.is-open {
+
     display: flex;
+
   }
+
   
+
   .nav-list {
+
     flex-direction: column;
+
     align-items: flex-start;
+
     gap: 1rem;
+
     width: 100%;
+
   }
+
   
+
   .nav-cta-wrap {
+
     width: 100%;
+
   }
+
   
+
   .nav-cta-wrap .btn {
+
     width: 100%;
+
   }
+
   
+
   .stats-grid,
+
   .compare-grid,
+
   .steps-grid,
+
   .reviews-grid,
+
   .pricing-grid {
+
     grid-template-columns: 1fr;
+
   }
+
   
+
   .footer-grid {
+
     grid-template-columns: 1fr;
+
   }
+
   
+
   .hero {
+
   position: relative;
+
   padding: 5rem 0 4.5rem;
+
   background: 
+
     radial-gradient(circle at 12% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+
     radial-gradient(circle at 88% 75%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+
     linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 35%, #f8fafc 70%, #ffffff 100%);
+
   border-bottom: 1px solid #e2e8f0;
+
   overflow: hidden;
+
 }
+
+
 
 .hero::before {
+
   content: "";
+
   position: absolute;
+
   top: 0;
+
   left: 0;
+
   right: 0;
+
   bottom: 0;
+
   background-image: 
+
     linear-gradient(to right, rgba(2, 132, 199, 0.035) 1px, transparent 1px),
+
     linear-gradient(to bottom, rgba(2, 132, 199, 0.035) 1px, transparent 1px);
+
   background-size: 36px 36px;
+
   pointer-events: none;
+
   mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
+
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
-}
-  
-  .hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .hero-cta-group .btn {
-    width: 100%;
-    text-align: center;
-  }
+
 }
 
-@media (max-width: 540px) {
   
+
+  .hero-cta-group {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
   
+
+  .hero-cta-group .btn {
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
 }
+
+
+
+@media (max-width: 540px) {
+
+  
+
+  
+
+}
+
+
 
   </style>
 
+
+
   <!-- Structured Data: Organization -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "Organization",
+
     "@id": "https://12testers-14-days.github.io/#organization",
+
     "name": "12 Testers For 14 Days",
+
     "alternateName": "12 Testers For 14 Days Closed Testing Service",
+
     "url": "https://12testers-14-days.github.io/",
+
     "logo": "https://12testers-14-days.github.io/assets/logo.svg",
+
     "contactPoint": {
+
       "@type": "ContactPoint",
+
       "telephone": "+923394001479",
+
       "contactType": "customer service",
+
       "availableLanguage": ["English", "Spanish", "German", "Hindi", "Urdu"]
+
     },
+
     "sameAs": [
+
       "https://www.trustpilot.com/review/appconsolelab.com"
+
     ]
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: WebSite -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "WebSite",
+
     "@id": "https://12testers-14-days.github.io/#website",
+
     "url": "https://12testers-14-days.github.io/",
+
     "name": "12 Testers For 14 Days",
+
     "publisher": { "@id": "https://12testers-14-days.github.io/#organization" },
+
     "inLanguage": "en-US"
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: Service -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "Service",
+
     "@id": "https://12testers-14-days.github.io/#service",
+
     "serviceType": "Google Play Closed Testing Service",
+
     "name": "12 Testers For 14 Days Closed Testing Management",
+
     "description": "Managed closed testing cohort service for personal Google Play developer accounts. Provides 12 to 20 verified real-device Android testers active across 14 consecutive days.",
+
     "provider": { "@id": "https://12testers-14-days.github.io/#organization" },
+
     "hasOfferCatalog": {
+
       "@type": "OfferCatalog",
+
       "name": "Closed Testing Cohort Packages",
+
       "itemListElement": [
+
         {
+
           "@type": "Offer",
+
           "name": "12 Testers For 14 Days Basic Package",
+
           "price": "20.00",
+
           "priceCurrency": "USD",
+
           "description": "12 verified real Android testers opted in continuously for 14 full days with daily app launches and supervisor guidance."
+
         },
+
         {
+
           "@type": "Offer",
+
           "name": "12 Testers For 14 Days Premium Package",
+
           "price": "40.00",
+
           "priceCurrency": "USD",
+
           "description": "20 verified real Android testers, priority onboarding, daily activity tracking, feedback reports, and free 14-day retest coverage."
+
         }
+
       ]
+
     }
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: HowTo -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "HowTo",
+
     "@id": "https://12testers-14-days.github.io/#howto",
+
     "name": "How to Complete 12 Testers For 14 Days Closed Testing for Google Play",
+
     "description": "Step-by-step instructions to set up, recruit testers, maintain 14 days of continuous opt-in, and apply for Google Play production access.",
+
     "step": [
+
       {
+
         "@type": "HowToStep",
+
         "position": 1,
+
         "name": "Submit Your App",
+
         "text": "Share your app link and Google Play Console closed testing opt-in URL."
+
       },
+
       {
+
         "@type": "HowToStep",
+
         "position": 2,
+
         "name": "Connect With Supervisor",
+
         "text": "Connect with your assigned team supervisor to verify track settings and email access."
+
       },
+
       {
+
         "@type": "HowToStep",
+
         "position": 3,
+
         "name": "Tester Installation",
+
         "text": "Real testers install your Android App Bundle on their personal physical smartphones."
+
       },
+
       {
+
         "@type": "HowToStep",
+
         "position": 4,
+
         "name": "14-Day Testing",
+
         "text": "Testers keep your app installed and open it regularly for 14 consecutive days."
+
       },
+
       {
+
         "@type": "HowToStep",
+
         "position": 5,
+
         "name": "Track Your Progress",
+
         "text": "Monitor daily active counts, tester feedback, and engagement benchmarks."
+
       },
+
       {
+
         "@type": "HowToStep",
+
         "position": 6,
+
         "name": "Apply for Production",
+
         "text": "Submit Google's 7 production access questions with our tailored developer answers."
+
       }
+
     ]
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: BreadcrumbList -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "BreadcrumbList",
+
     "@id": "https://12testers-14-days.github.io/#breadcrumb",
+
     "itemListElement": [
+
       {
+
         "@type": "ListItem",
+
         "position": 1,
+
         "name": "Home",
+
         "item": "https://12testers-14-days.github.io/"
+
       }
+
     ]
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: FAQPage (Strictly the 16 FAQs) -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "FAQPage",
+
     "@id": "https://12testers-14-days.github.io/#faq",
+
     "mainEntity": [
+
       {
+
         "@type": "Question",
+
         "name": "Is production access guaranteed after closed testing?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "We maintain an industry-leading 99.8% approval rate. Our real testers actively use your app throughout the 14 days so you fulfill Google's engagement requirements. Please note that TWA (Trusted Web Activity) apps have higher scrutiny from Google; we suggest converting TWAs into standard WebView during testing to maximize approval odds."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "What happens if Google rejects my production access application? Can I get a refund?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Yes, completely. If Google does not approve your production access request after completing your test with us, you can choose between an immediate 100% full refund or a free 14-day retest cohort."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Does testing start immediately after payment?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Testing begins right after a brief onboarding check. Once your order is placed, a supervisor connects with you on WhatsApp or email within 30 minutes to 8 hours. Because our testers are real people across different time zones, all 12 installs are typically completed within a few hours."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "What happens if a tester leaves during the 14 days?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "We always add extra testers as a safety buffer. For example, our Basic plan provides 12 testers with instant replacement backups, and our Premium tier provides 20 testers. Your active count never drops below Google's 12-tester minimum."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "What is Google's 14-day closed testing rule?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Any personal Google Play developer account registered on or after November 13, 2023, must test their app with at least 12 testers opted in continuously for 14 straight days before applying for public release."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "When does the 14-day testing period start and finish?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "The timer begins once 12 testers have opted in to your closed testing track in Google Play Console. It runs for 14 full consecutive 24-hour cycles (336 hours in total), after which the Apply for Production button lights up in your console."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Will testers actively open and use my app every day?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Yes! Our testers regularly launch your app, explore its screens, and test features throughout the two weeks. This creates the genuine user activity telemetry that Google looks for."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Can I publish app updates during the 14-day test?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Yes, absolutely. Pushing new updates or bug fixes does not restart your 14-day counter. Our testers receive the update automatically via Google Play and keep testing."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Am I required to update my app during the test?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "No, updating is not strictly required by Google. However, if testers find any bugs, pushing a small update between Day 6 and Day 12 demonstrates active development, which looks positive during Google's review."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "How do your testers help improve my app?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Because our testers use real phones with different screen sizes and Android versions, they spot UI glitches, slow loading times, crashes, and confusing navigation, providing valuable private feedback."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "How do you monitor tester activity over the 14 days?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Our team coordinates with testers daily to ensure consistent app opens and feature checks. We verify opt-in status in Play Console and track progress throughout the entire two-week testing run."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "What do I need to share to get started?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "We only need your Google Play Console closed testing opt-in link (either the web or Android link) and your Google Group if applicable. You never need to share passwords or developer account credentials."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "How does the testing dashboard work?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Your dashboard keeps you updated with completed testing days, active opted-in counts, user feedback notes, and recommendations to help you get ready for production application."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Do you help with Google's 7 production access questions?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Yes! Once Day 14 concludes, we provide personalized, proven answers for Google's 7 production questionnaire questions, drawing directly from the real feedback and improvements made during your test."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "Where are your testers located?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "Our tester network includes real smartphone owners from over 40 countries across the US, Europe, Asia, and the Americas, providing the natural device and IP diversity that Google expects."
+
         }
+
       },
+
       {
+
         "@type": "Question",
+
         "name": "How do I know if my developer account needs 12 testers?",
+
         "acceptedAnswer": {
+
           "@type": "Answer",
+
           "text": "If you created a personal Google Play Console developer account on or after November 13, 2023, Google requires you to complete this 14-day closed test before you can publish public apps."
+
         }
+
       }
+
     ]
+
   }
+
   </script>
+
+
 
   <!-- Structured Data: Product -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "Product",
+
     "@id": "https://12testers-14-days.github.io/#product",
+
     "name": "12 Testers For 14 Days Closed Testing Cohort",
+
     "description": "Managed closed testing cohort service for personal Google Play developer accounts. Provides 12 to 20 verified real-device Android testers active across 14 consecutive days.",
+
     "image": "https://12testers-14-days.github.io/assets/og-image.svg",
+
     "brand": {
+
       "@type": "Brand",
+
       "name": "12 Testers For 14 Days"
+
     },
+
     "sku": "12T-14D-COHORT",
+
     "mpn": "12T-14D-GP",
+
     "offers": {
+
       "@type": "AggregateOffer",
+
       "lowPrice": "20.00",
+
       "highPrice": "40.00",
+
       "priceCurrency": "USD",
+
       "offerCount": 2,
+
       "offers": [
+
         {
+
           "@type": "Offer",
+
           "name": "Basic Cohort",
+
           "price": "20.00",
+
           "priceCurrency": "USD",
+
           "availability": "https://schema.org/InStock",
+
           "url": "https://appconsolelab.com/?ref=12testers-14-days.github.io&utm_source=12testers-14-days.github.io&utm_medium=referral"
+
         },
+
         {
+
           "@type": "Offer",
+
           "name": "Premium Cohort",
+
           "price": "40.00",
+
           "priceCurrency": "USD",
+
           "availability": "https://schema.org/InStock",
+
           "url": "https://appconsolelab.com/?ref=12testers-14-days.github.io&utm_source=12testers-14-days.github.io&utm_medium=referral"
+
         }
+
       ]
+
     },
+
     "aggregateRating": {
+
       "@type": "AggregateRating",
+
       "ratingValue": "4.9",
+
       "reviewCount": "185",
+
       "bestRating": "5",
+
       "worstRating": "1"
+
     }
+
   }
+
   </script>
+
 </head>
+
 <body>
 
+
+
   <!-- Site Header (No unwanted text above) -->
+
   <header class="site-header">
+
     <div class="container nav-wrap">
+
       <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-        <svg class="logo-svg" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+        <svg class="logo-svg" width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
-            <linearGradient id="gpLogoGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+            <linearGradient id="gpLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#0284c7"/>
               <stop offset="50%" stop-color="#2563eb"/>
               <stop offset="100%" stop-color="#4f46e5"/>
             </linearGradient>
-            <linearGradient id="gpBadgeGrad" x1="16" y1="16" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#16a34a"/>
-              <stop offset="100%" stop-color="#059669"/>
+            <linearGradient id="gpBadgeGrad" x1="22" y1="21" x2="34" y2="33" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="100%" stop-color="#047857"/>
             </linearGradient>
+            <filter id="gpPlayGlow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.22"/>
+            </filter>
           </defs>
-          <path d="M6 5.8C6 4.4 7.5 3.5 8.7 4.2L23.5 13.4C24.7 14.1 24.7 15.9 23.5 16.6L8.7 25.8C7.5 26.5 6 25.6 6 24.2V5.8Z" fill="url(#gpLogoGrad)"/>
-          <circle cx="22" cy="22" r="7.5" fill="#ffffff"/>
-          <circle cx="22" cy="22" r="6" fill="url(#gpBadgeGrad)"/>
-          <path d="M19.2 22L21.2 24L24.8 19.8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect width="40" height="40" rx="10" fill="url(#gpLogoGrad)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <path d="M12.5 10.5C12.5 9.4 13.7 8.7 14.6 9.3L26 16.8C26.9 17.4 26.9 18.6 26 19.2L14.6 26.7C13.7 27.3 12.5 26.6 12.5 25.5V10.5Z" fill="#ffffff" filter="url(#gpPlayGlow)"/>
+          <path d="M12.5 10.5L20 18L12.5 25.5" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.2" stroke-linejoin="round"/>
+          <circle cx="28.5" cy="27.5" r="7.5" fill="#ffffff"/>
+          <circle cx="28.5" cy="27.5" r="6" fill="url(#gpBadgeGrad)"/>
+          <path d="M25.7 27.5L27.7 29.5L31.3 25.2" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+
         <div class="logo-text-group">
+
           <span class="logo-text"><strong>12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
+
           <span class="logo-byline">
+
             <span class="by-text">by</span>
+
             <img src="/assets/ACL_Logo_Light_theme.png" alt="AppConsoleLab" class="acl-sublogo" width="120" height="40">
+
           </span>
+
         </div>
+
       </a>
 
+
+
       <!-- Mobile Hamburger Toggle Button -->
+
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" type="button" aria-expanded="false">
+
         <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
           <line x1="3" y1="6" x2="21" y2="6"></line>
+
           <line x1="3" y1="12" x2="21" y2="12"></line>
+
           <line x1="3" y1="18" x2="21" y2="18"></line>
+
         </svg>
+
         <svg class="close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+
           <line x1="18" y1="6" x2="6" y2="18"></line>
+
           <line x1="6" y1="6" x2="18" y2="18"></line>
+
         </svg>
+
       </button>
 
+
+
       <!-- Navigation Menu -->
+
       <nav class="main-nav" id="mainNav">
+
         <ul class="nav-list">
+
           <li><a href="/" class="nav-link active">Home</a></li>
+
           <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
+
           <li><a href="#reviews" class="nav-link">Reviews</a></li>
+
           <li><a href="#faq" class="nav-link">FAQs</a></li>
+
           <li><a href="/guides/" class="nav-link">Guides</a></li>
+
         </ul>
+
         <div class="nav-cta-wrap">
+
           <a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+
             <span class="pulse-dot-green"></span>
+
             <span>Chat on WhatsApp</span>
+
           </a>
+
         </div>
+
       </nav>
+
     </div>
+
   </header>
 
+
+
   <main>
+
     <!-- SECTION 1: HERO -->
+
     <section class="hero">
+
       <div class="container hero-grid">
+
         <div class="hero-content">
+
           <div class="badge">
+
             <span class="pulse-dot"></span> Google Play Closed Testing Service
+
           </div>
+
           <h1>12 Testers For 14 Days</h1>
+
           <p class="hero-lead">
+
             Get <strong>12 genuine Android users to test your app for two continuous weeks</strong>. We provide real people on physical smartphones, daily app opens, and guaranteed Google Play production approval or your money back.
+
           </p>
+
+
 
           <div class="hero-cta-group" style="margin-bottom: 1rem;">
+
             <a href="#pricing" class="btn btn-primary btn-lg">Get 12 Testers Now &rarr;</a>
+
             <a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%2012%20testers%20for%2014%20days" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+
               <span class="pulse-dot-green"></span> Chat on WhatsApp
+
             </a>
+
           </div>
+
           <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.825rem; color: var(--text-muted); font-weight: 500; margin-bottom: 2rem;">
+
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+
             <span>100% money-back guarantee &bull; Setup in &lt; 6 hours &bull; No password sharing</span>
+
           </div>
+
+
 
           <div class="hero-trust-bar">
+
             <div class="trust-item">
+
               <img src="/assets/5stars.svg" alt="5 Stars" width="88" height="16">
+
               <span><strong>4.9/5</strong> Trustpilot Rating</span>
+
             </div>
+
             <div class="trust-item">
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
               <span><strong>100%</strong> Money-Back Guarantee</span>
+
             </div>
+
             <div class="trust-item">
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+
               <span><strong>Real Phones</strong> Only</span>
+
             </div>
+
           </div>
+
         </div>
+
+
 
         <!-- Hero Card / Quick Policy Overview -->
+
         <div class="hero-card">
+
           <div class="card-header-badge">
+
             <span class="dot-live"></span> 14-Day Testing Guarantee
+
           </div>
+
           <h2 style="font-size: 1.35rem; color: #0f172a; margin-bottom: 0.75rem;">How the 14-Day Test Works</h2>
+
           <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1.25rem;">
+
             Google Play requires all personal accounts created after Nov 13, 2023 to keep 12 testers opted in for 14 straight days. Here is how our team takes care of it for you:
+
           </p>
+
+
 
           <ul class="hero-feature-list">
+
             <li>
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
               <span><strong>12+ Real Android Phones:</strong> Samsung, Xiaomi, Pixel, and Motorola devices (no virtual emulators).</span>
+
             </li>
+
             <li>
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
               <span><strong>Zero Dropouts:</strong> Active tester counts stay above 12 with automatic standby backups.</span>
+
             </li>
+
             <li>
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
               <span><strong>Daily Active Use:</strong> Testers open your app each day, try features, and leave helpful feedback.</span>
+
             </li>
+
             <li>
+
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
               <span><strong>Day 15 Application Help:</strong> Tailored answers ready for Google's 7 production access questions.</span>
+
             </li>
+
           </ul>
 
+
+
           <div class="hero-price-strip">
+
             <div>
+
               <span style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.05em; display: block;">Starting Price</span>
+
               <span style="font-size: 1.5rem; font-weight: 800; color: #0f172a;">$20 <span style="font-size: 0.85rem; font-weight: 500; color: #64748b;">/ one-time</span></span>
+
             </div>
+
             <a href="#pricing" class="btn btn-primary btn-sm">View Plans &rarr;</a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 2: RESULTS & TRACK RECORD -->
+
     <section class="section section-alt">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Our Track Record</div>
+
           <h2>Real Results Across Google Play Closed Tests</h2>
+
           <p class="section-lead">
+
             We track every app's progress closely to make sure your testing counter never drops below 12 testers.
+
           </p>
+
         </div>
+
+
 
         <div class="stats-grid">
+
           <div class="stat-card">
+
             <span class="stat-number">1,850+</span>
+
             <span class="stat-label">Apps Passed Review</span>
+
             <p class="stat-sub">Android apps successfully moved from closed testing to live on Google Play.</p>
+
           </div>
+
           <div class="stat-card">
+
             <span class="stat-number">100%</span>
+
             <span class="stat-label">Tester Retention</span>
+
             <p class="stat-sub">Zero dropouts below the required 12-tester threshold throughout the 14 days.</p>
+
           </div>
+
           <div class="stat-card">
+
             <span class="stat-number">&lt; 6 Hours</span>
+
             <span class="stat-label">Fast Setup Time</span>
+
             <p class="stat-sub">From placing your order to having testers actively installing your app.</p>
+
           </div>
+
           <div class="stat-card">
+
             <span class="stat-number">99.8%</span>
+
             <span class="stat-label">Approval Success Rate</span>
+
             <p class="stat-sub">Backed by our 100% money-back guarantee or free retest policy.</p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
         <!-- SEO EXPLAINER SECTION: 12 TESTERS FOR 14 DAYS -->
+
     <section class="section" style="padding-bottom: 0;">
+
       <div class="container">
+
         <div class="card" style="padding: 2.75rem 2.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: #ffffff; box-shadow: var(--shadow-sm);">
+
           <div class="badge" style="background: var(--brand-light); color: var(--brand-primary); margin-bottom: 1rem;">
+
             <span class="pulse-dot"></span> Essential Closed Testing Guide
+
           </div>
+
           <h2 style="font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--text-main); margin-bottom: 1.25rem; line-height: 1.3;">
+
             What is the 12 Testers For 14 Days Requirement and How Does It Guarantee Google Play Production Approval?
+
           </h2>
+
           <div style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-body); font-size: 1.025rem; line-height: 1.75;">
+
             <p>
+
               Google Play requires all personal developer accounts created on or after November 13, 2023, to successfully complete a mandatory closed testing track before they can apply for production access. Under this policy, you must keep at least <strong>12 testers for 14 days</strong> opted in continuously. This means a minimum of 12 real people must accept your closed testing invite and keep your application installed on their Android smartphones for 336 uninterrupted hours.
+
             </p>
+
             <p>
+
               Completing <strong>12 testers for 14 days</strong> is not just about having numbers in your Google Play Console. Google's review algorithm actively evaluates user engagement telemetry through Google Play Protect. If testers merely accept the web invite but never open the app, or if someone uninstalls on Day 10 and drops your count below 12, Google resets the 14-day timer or issues the dreaded rejection notice: <em>"Testers were not engaged with your app."</em>
+
             </p>
+
             <p>
+
               Our managed <strong>12 testers for 14 days</strong> service solves this completely by deploying real human testers on genuine physical Android devices across diverse geographic regions. Our testers actively launch your app daily, test its core user flows, report crashes or bugs, and provide meaningful feedback. Furthermore, we maintain a standby tester safety buffer so your continuous opt-in count never drops. When the 14-day testing milestone is reached, we provide custom, data-backed answers for Google's 7 mandatory production application questions, ensuring your app moves smoothly from closed testing to live public release on Google Play with a 100% money-back guarantee.
+
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
 <!-- SECTION 3: REJECTION RECOVERY -->
+
     <section class="section">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge badge-amber">Passing Google Review</div>
+
           <h2>Why Most Closed Tests Fail &ndash; And How We Help You Pass</h2>
+
           <p class="section-lead">
+
             If you received an email from Google saying your testers were not engaged enough, you are not alone. Here is what went wrong and how our service fixes it:
+
           </p>
+
         </div>
 
+
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+
           
+
           <!-- Box 1: Why Google Rejects -->
+
           <div class="card" style="padding: 2.25rem 2rem; border-top: 4px solid #e11d48;">
+
             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+
               <span style="background: #ffe4e6; color: #e11d48; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 800; font-size: 1.1rem;">&times;</span>
+
               <h3 style="font-size: 1.3rem; color: #0f172a; margin: 0;">Common Testing Mistakes</h3>
+
             </div>
+
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #e11d48; font-weight: 700;">&bull;</span>
+
                 <span><strong>Testers Open Once and Forget:</strong> Friends download on Day 1 but never open the app again. Google detects inactivity through Play Protect.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #e11d48; font-weight: 700;">&bull;</span>
+
                 <span><strong>Tester Dropouts:</strong> When someone uninstalls on Day 10, your active count falls to 11 and Google resets your 14-day clock to zero.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #e11d48; font-weight: 700;">&bull;</span>
+
                 <span><strong>Bot Swaps &amp; Same IP Flags:</strong> Free exchange groups use bot scripts or virtual machines that share the same IP subnets, triggering immediate security flags.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #e11d48; font-weight: 700;">&bull;</span>
+
                 <span><strong>Vague Day 15 Answers:</strong> Submitting generic answers to Google's 7 questions without evidence of real feedback or improvements.</span>
+
               </li>
+
             </ul>
+
           </div>
+
+
 
           <!-- Box 2: How We Guarantee Approval -->
+
           <div class="card" style="padding: 2.25rem 2rem; border-top: 4px solid #16a34a;">
+
             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+
               <span style="background: #dcfce7; color: #16a34a; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 800; font-size: 1.1rem;">&#10003;</span>
+
               <h3 style="font-size: 1.3rem; color: #0f172a; margin: 0;">Our Real Tester Guarantee</h3>
+
             </div>
+
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #16a34a; font-weight: 700;">&bull;</span>
+
                 <span><strong>Consistent Daily Launches:</strong> Testers open your app across the two weeks and interact with its screens so Google records authentic usage.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #16a34a; font-weight: 700;">&bull;</span>
+
                 <span><strong>Built-In Tester Backups:</strong> We assign additional testers beyond the minimum 12. If anyone changes phones, your count never drops.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #16a34a; font-weight: 700;">&bull;</span>
+
                 <span><strong>Real Android Hardware:</strong> Every tester uses their personal smartphone (Samsung, Xiaomi, Pixel) on regular residential Wi-Fi networks.</span>
+
               </li>
+
               <li style="display: flex; gap: 0.75rem;">
+
                 <span style="color: #16a34a; font-weight: 700;">&bull;</span>
+
                 <span><strong>Tailored Day 15 Answers:</strong> We give you customized answers based on real user feedback from your testing run so you submit with confidence.</span>
+
               </li>
+
             </ul>
+
           </div>
 
+
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 4: HOW IT WORKS -->
+
     <section class="section section-alt" id="how-it-works">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Simple Process</div>
+
           <h2>How It Works: Step-by-Step</h2>
+
           <p class="section-lead">
+
             Getting your app ready for Google Play production access is straightforward:
+
           </p>
+
         </div>
+
+
 
         <div class="steps-grid">
+
           
+
           <div class="step-card">
+
             <div class="step-num">01</div>
+
             <h3>Submit Your App</h3>
+
             <p>Select your testing package and provide your Google Play closed testing opt-in link (web or Android URL).</p>
+
           </div>
 
+
+
           <div class="step-card">
+
             <div class="step-num">02</div>
+
             <h3>Connect with Coordinator</h3>
+
             <p>A dedicated team member reaches out on WhatsApp or email to verify your app link and confirm tester access.</p>
+
           </div>
 
+
+
           <div class="step-card">
+
             <div class="step-num">03</div>
+
             <h3>Testers Install Your App</h3>
+
             <p>Our vetted testers download and install your app from Google Play onto their physical Android phones.</p>
+
           </div>
 
+
+
           <div class="step-card">
+
             <div class="step-num">04</div>
+
             <h3>14 Days of Active Testing</h3>
+
             <p>Testers keep the app installed, open it regularly, try out features, and leave private user feedback.</p>
+
           </div>
 
+
+
           <div class="step-card">
+
             <div class="step-num">05</div>
+
             <h3>Check Your Daily Progress</h3>
+
             <p>Watch your 14-day timer tick down in Google Play Console with steady tester numbers and daily activity.</p>
+
           </div>
 
+
+
           <div class="step-card">
+
             <div class="step-num">06</div>
+
             <h3>Apply for Production</h3>
+
             <p>Use our tailored answers for Google's 7 review questions and submit your application for production approval.</p>
+
           </div>
+
+
 
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 5: COMPARISON -->
+
     <section class="section" id="compare">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Compare Options</div>
+
           <h2>Finding Testers: Comparing Your Options</h2>
+
           <p class="section-lead">
+
             Here is how our managed testing service compares to asking friends or joining free swap groups:
+
           </p>
+
         </div>
+
+
 
         <div class="compare-grid">
+
           
+
           <!-- Column 1: Friends & Family -->
+
           <div class="compare-card">
+
             <span class="badge" style="background: #f1f5f9; color: #64748b; border-color: #e2e8f0;">DIY Approach</span>
+
             <h3 style="font-size: 1.25rem; color: #0f172a;">Friends &amp; Family</h3>
+
             <p style="font-size: 0.925rem; color: #64748b; line-height: 1.5;">
+
               Asking acquaintances, coworkers, or family to test your app for two straight weeks.
+
             </p>
+
             <ul class="compare-list">
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>High Dropout Rate:</strong> People easily uninstall after 2-3 days, resetting your timer.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Awkward Reminders:</strong> You must constantly ask people every day to open your app.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Little Helpful Feedback:</strong> Most friends leave simple "looks good" notes with no bug reports.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Slow Setup:</strong> Finding 12 people with Android phones can take weeks on its own.</span></li>
+
             </ul>
+
           </div>
+
+
 
           <!-- Column 2: Free Swaps & Bot Panels -->
+
           <div class="compare-card" style="border-color: #fecdd3;">
+
             <span class="badge" style="background: #ffe4e6; color: #e11d48; border-color: #fecdd3;">Risky Method</span>
+
             <h3 style="font-size: 1.25rem; color: #0f172a;">Free Swap Groups &amp; Bots</h3>
+
             <p style="font-size: 0.925rem; color: #64748b; line-height: 1.5;">
+
               Joining Reddit/Telegram swap communities or buying automated $5 click panels.
+
             </p>
+
             <ul class="compare-list">
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Google Security Flags:</strong> Automated emulators fail Play Protect checks and get flagged.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Account Association:</strong> If other apps in the swap group get banned, your account can be linked.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Ghost Testers:</strong> People accept the link but never launch the app, causing rejection.</span></li>
+
               <li><span style="color: #e11d48; font-weight: 700;">&times;</span> <span><strong>Zero Support:</strong> If Google rejects you, you have lost two weeks and have to start over.</span></li>
+
             </ul>
+
           </div>
+
+
 
           <!-- Column 3: 12 Testers For 14 Days -->
+
           <div class="compare-card recommended">
+
             <span class="badge badge-success">Recommended</span>
+
             <h3 style="font-size: 1.25rem; color: #0f172a;">12 Testers For 14 Days</h3>
+
             <p style="font-size: 0.925rem; color: #64748b; line-height: 1.5;">
+
               Fully managed closed testing cohort with real humans on verified physical Android hardware.
+
             </p>
+
             <ul class="compare-list">
+
               <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>100% Real Android Devices:</strong> Authentic Samsung, Xiaomi, and Pixel phones.</span></li>
+
               <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>14 Full Continuous Days:</strong> Active backups ensure your count never drops below 12.</span></li>
+
               <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Verified Daily Activity:</strong> Real testers open the app regularly and test features.</span></li>
+
               <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Day 15 Question Answers:</strong> Tailored guidance plus a 100% money-back guarantee.</span></li>
+
             </ul>
+
           </div>
 
+
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 6: WHY $20 -->
+
     <section class="section section-alt" id="why-price">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Honest Value</div>
+
           <h2>What You Get for $20 &ndash; And Why We Charge It</h2>
+
           <p class="section-lead">
+
             We believe in transparent, upfront pricing. Here is why $20 is the most affordable and reliable fee for 14 full days of real testing:
+
           </p>
+
         </div>
+
+
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+
           
-          <div class="card" style="padding: 2.25rem 2rem;">
-            <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1.25rem;">What is Included for $20</h3>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155;">
-              <li style="display: flex; gap: 0.75rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>12 Real Android Testers:</strong> Opted in continuously for 14 straight days (336 hours).</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Daily App Opens:</strong> Testers explore features so Google logs active engagement.</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Backup Tester Buffer:</strong> We assign extra testers so your count stays safe from dropouts.</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Day 15 Application Answers:</strong> Proven answers for Google's 7 production questions.</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>100% Money-Back Guarantee:</strong> Full refund or free retest if Google rejects production access.</span>
-              </li>
-            </ul>
-          </div>
 
           <div class="card" style="padding: 2.25rem 2rem;">
-            <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1.25rem;">Why It Costs $20</h3>
-            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 1rem;">
-              Services offering $5 testing rely on automated emulator scripts or fake bot clicks. These bots fail Google's hardware checks and lead to quick rejections or account flags.
-            </p>
-            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 1rem;">
-              Our $20 fee compensates <strong>real human testers</strong> who keep your app on their personal phones for two weeks, and covers daily supervision by an experienced coordinator.
-            </p>
-            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin: 0;">
-              For just $20, you protect your developer account, save weeks of frustration, and secure guaranteed approval.
-            </p>
+
+            <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1.25rem;">What is Included for $20</h3>
+
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155;">
+
+              <li style="display: flex; gap: 0.75rem;">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+                <span><strong>12 Real Android Testers:</strong> Opted in continuously for 14 straight days (336 hours).</span>
+
+              </li>
+
+              <li style="display: flex; gap: 0.75rem;">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+                <span><strong>Daily App Opens:</strong> Testers explore features so Google logs active engagement.</span>
+
+              </li>
+
+              <li style="display: flex; gap: 0.75rem;">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+                <span><strong>Backup Tester Buffer:</strong> We assign extra testers so your count stays safe from dropouts.</span>
+
+              </li>
+
+              <li style="display: flex; gap: 0.75rem;">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+                <span><strong>Day 15 Application Answers:</strong> Proven answers for Google's 7 production questions.</span>
+
+              </li>
+
+              <li style="display: flex; gap: 0.75rem;">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" style="flex-shrink: 0; margin-top: 0.15rem;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+                <span><strong>100% Money-Back Guarantee:</strong> Full refund or free retest if Google rejects production access.</span>
+
+              </li>
+
+            </ul>
+
           </div>
+
+
+
+          <div class="card" style="padding: 2.25rem 2rem;">
+
+            <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1.25rem;">Why It Costs $20</h3>
+
+            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 1rem;">
+
+              Services offering $5 testing rely on automated emulator scripts or fake bot clicks. These bots fail Google's hardware checks and lead to quick rejections or account flags.
+
+            </p>
+
+            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 1rem;">
+
+              Our $20 fee compensates <strong>real human testers</strong> who keep your app on their personal phones for two weeks, and covers daily supervision by an experienced coordinator.
+
+            </p>
+
+            <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin: 0;">
+
+              For just $20, you protect your developer account, save weeks of frustration, and secure guaranteed approval.
+
+            </p>
+
+          </div>
+
+
 
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 7: CHAPTERS & POLICY GUIDE -->
+
     <section class="section" id="guide">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Developer Guide</div>
+
           <h2>Understanding Google Play's 14-Day Testing Rule</h2>
+
           <p class="section-lead">
+
             A plain-English explanation of what Google requires and how to succeed:
+
           </p>
+
         </div>
+
+
 
         <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+
           
+
           <div class="card" style="padding: 2rem;">
+
             <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 0.65rem;">1. Why does Google require 12 testers for 14 days?</h3>
+
             <p style="font-size: 0.975rem; color: #475569; line-height: 1.7; margin: 0;">
+
               In late 2023, Google introduced this rule for all new personal developer accounts. The goal is to make sure apps are tested by real people on different phone models before reaching public users, catching bugs and crashes early.
+
             </p>
+
           </div>
 
+
+
           <div class="card" style="padding: 2rem;">
+
             <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 0.65rem;">2. What does 14 continuous days mean?</h3>
+
             <p style="font-size: 0.975rem; color: #475569; line-height: 1.7; margin: 0;">
+
               You need at least 12 people to stay opted in to your closed test for 14 full days (336 hours in total). If your tester count dips below 12 even for a short time, Google resets the counter back to Day 1.
+
             </p>
+
           </div>
 
+
+
           <div class="card" style="padding: 2rem;">
+
             <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 0.65rem;">3. Why real smartphones matter</h3>
+
             <p style="font-size: 0.975rem; color: #475569; line-height: 1.7; margin: 0;">
+
               Google Play Protect monitors whether devices running your app are real phones or emulators. Tests run on virtual emulators or device farms get flagged, which is why real physical devices are essential.
+
             </p>
+
           </div>
 
+
+
           <div class="card" style="padding: 2rem;">
+
             <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 0.65rem;">4. What happens on Day 15?</h3>
+
             <p style="font-size: 0.975rem; color: #475569; line-height: 1.7; margin: 0;">
+
               After the 14 days finish, the "Apply for production" button activates in Play Console. Clicking it brings up 7 review questions about your test. We provide you with clear, accurate answers based on the feedback collected during testing.
+
             </p>
+
           </div>
+
+
 
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 8: METHOD & ACCOUNT SAFETY -->
+
     <section class="section section-alt">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Account Safety</div>
+
           <h2>How We Protect Your Developer Account</h2>
+
           <p class="section-lead">
+
             We follow safe, legitimate practices so your Google account stays in good standing:
+
           </p>
+
         </div>
+
+
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem;">
+
           <div class="card" style="padding: 2rem;">
+
             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+
               <span style="background: var(--brand-light); color: var(--brand-primary); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+
               <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0;">Established Google Accounts</h3>
+
             </div>
+
             <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+
               Our testers use everyday personal Google accounts with real activity histories and regular Play Store downloads.
+
             </p>
+
           </div>
 
+
+
           <div class="card" style="padding: 2rem;">
+
             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+
               <span style="background: var(--brand-light); color: var(--brand-primary); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+
               <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0;">Device &amp; Location Variety</h3>
+
             </div>
+
             <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+
               Testers use different phone models and brands across multiple regions on normal home Wi-Fi and mobile networks.
+
             </p>
+
           </div>
 
+
+
           <div class="card" style="padding: 2rem;">
+
             <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+
               <span style="background: var(--brand-light); color: var(--brand-primary); width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+
               <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0;">No Account Logins Needed</h3>
+
             </div>
+
             <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+
               We never ask for your developer account password. All testing happens strictly through your public closed testing opt-in link.
+
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 9: VERIFIED CUSTOMER REVIEWS -->
+
     <section class="section" id="reviews">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Real Developer Feedback</div>
+
           <h2>Verified Customer Reviews</h2>
+
           <p class="section-lead">
+
             Read how Android developers around the world used our 12 Testers For 14 Days service to unlock Google Play production access:
+
           </p>
+
         </div>
+
+
 
         <div class="reviews-grid">
+
           
+
           <!-- Review 1: Amine El Alj -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Incredible Support for Google Play Console</h3>
+
               <p class="review-quote">
+
                 "AppConsoleLab gave me tremendous support with Google Play Console. Their team answered all my questions quickly and walked me through each step of closed testing until I got production access. If you need honest, dependable help with your Android app, I cannot recommend them enough!"
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Amine El Alj</div>
+
           </div>
+
+
 
           <!-- Review 2: Lamine Diop -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Wonderful Team to Work With</h3>
+
               <p class="review-quote">
+
                 "Truly a wonderful experience working with this team. Everyone was patient, responsive, and genuinely cared about helping my app get approved. I am so glad I chose them for my closed test."
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Lamine Diop</div>
+
           </div>
+
+
 
           <!-- Review 3: Kenny -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Approved for Production in 3 Days!</h3>
+
               <p class="review-quote">
+
                 "My app was approved for production in just 3 days after finishing closed testing! I chose the Basic plan, and within a few hours all 12 testers were set up and testing. The team sent regular updates so I always knew how the 14 days were going, and their Day 15 application help made the final step effortless."
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Kenny</div>
+
           </div>
+
+
 
           <!-- Review 4: Adnan Syed Beig -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Passed Review on First Attempt</h3>
+
               <p class="review-quote">
+
                 "If you are stuck on Google's 14-day requirement, save yourself the headache and work with this team. I used their service and my app passed production review on the very first try. The whole process was smooth and stress-free."
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Adnan Syed Beig</div>
+
           </div>
+
+
 
           <!-- Review 5: Worldi -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Great Service &amp; Affordable Price</h3>
+
               <p class="review-quote">
+
                 "Very budget-friendly and super easy to set up. I went with the starter package and was impressed by the communication and helpful feedback report. It clearly showed what users noticed and made applying for production simple."
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Worldi</div>
+
           </div>
+
+
 
           <!-- Review 6: Marcus Lindqvist -->
+
           <div class="review-card">
+
             <div>
+
               <div class="review-header">
+
                 <img src="/assets/5stars.svg" alt="5 Stars" width="84" height="15">
+
                 <span class="badge badge-success" style="font-size: 0.75rem;">Verified User</span>
+
               </div>
+
               <h3 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.75rem;">Smooth &amp; Stress-Free Closed Testing</h3>
+
               <p class="review-quote">
+
                 "I had already failed production access once after my friends stopped opening my app. This service completely fixed the issue. All testers stayed active every single day, and Google approved my production track right away."
+
               </p>
+
             </div>
+
             <div class="reviewer-name">Marcus Lindqvist</div>
+
           </div>
 
+
+
         </div>
+
+
 
         <!-- Trustpilot Official Link Banner -->
+
         <div style="margin-top: 2.5rem; text-align: center; background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm); max-width: 650px; margin-left: auto; margin-right: auto;">
+
           <p style="font-size: 1.05rem; color: #334155; margin-bottom: 0.75rem; font-weight: 500;">
+
             Rated <strong>Excellent (4.9 / 5.0)</strong> by Android developers worldwide on Trustpilot.
+
           </p>
+
           <a href="https://www.trustpilot.com/review/appconsolelab.com" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+
             Read Reviews on Trustpilot &rarr;
+
           </a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
         <!-- SECTION 10: PRICING -->
+
     <section class="section section-alt" id="pricing">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Official Packages</div>
+
           <h2>One Cycle. Complete Approval.</h2>
+
           <p class="section-lead">
+
             Select the plan that fits your release complexity. To view full package details and place your order, visit our official website: 
+
             <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=pricing_header" target="_blank" rel="noopener noreferrer" style="color: var(--brand-primary); font-weight: 700; text-decoration: underline;">https://appconsolelab.com</a>
+
           </p>
+
         </div>
+
+
 
         <!-- Official Website Notice Banner -->
+
         <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; max-width: 860px; margin: 0 auto 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
+
           <p style="font-size: 0.975rem; color: var(--text-body); margin: 0;">
+
             <strong>Official Ordering:</strong> Visit our official website at <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=pricing_banner" target="_blank" rel="noopener noreferrer" style="color: var(--brand-primary); font-weight: 700; text-decoration: underline;">appconsolelab.com</a> for instant onboarding, dedicated account supervisor assignment, and 100% money-back guarantee protection.
+
           </p>
+
         </div>
+
+
 
         <div class="pricing-grid">
+
           
+
           <!-- Basic Plan ($20) -->
+
           <div class="pricing-card">
+
             <div>
+
               <span class="badge" style="background: #f1f5f9; color: #475569; border-color: #e2e8f0;">Starter Package</span>
+
               <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 0.35rem;">Basic</h3>
+
               <p style="color: #64748b; font-size: 0.95rem; line-height: 1.5;">
+
                 Essential closed testing with real testers and guaranteed approval.
+
               </p>
+
               <div style="margin: 1.25rem 0;">
+
                 <span style="font-size: 1.1rem; text-decoration: line-through; color: #94a3b8; margin-right: 0.5rem;">$30</span>
+
                 <span class="price-val">$20</span>
+
                 <span class="price-sub">per release / one-time</span>
+
               </div>
+
               <ul class="pricing-features">
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>25 Real Human Testers</strong></span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Production Access Guarantee</strong></span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Dedicated Account Supervisor</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>14-Day Closed Testing</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Detailed Feedback &amp; Bug analysis</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>UI/UX &amp; App Flow Testing Report</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Tested on 25+ Real Android Devices</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>2 Days of Additional Testing</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Up To 10 Minutes Testing Per Device Daily</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>High-End Android Devices (Android 7&ndash;16)</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Monitoring (Screenshots Included)</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Bug Reports With Screenshot Evidence</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Private Tester Feedback on Google Play</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Basic Play Store Policy Compliance Check</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Performance &amp; UI Testing With Suggestions</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Consistent Tester Engagement Throughout 14 Days</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Final Testing Completion Report</span></li>
+
               </ul>
+
             </div>
+
             <div style="margin-top: 1.5rem;">
+
               <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.825rem; color: #166534; font-weight: 600; text-align: center; margin-bottom: 1rem;">
+
                 Get Production Access &mdash; Or Your Money Back!
+
               </div>
+
               <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=pricing_basic" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; text-align: center;">
+
                 Visit Official Website &rarr;
+
               </a>
+
             </div>
+
           </div>
+
+
 
           <!-- Premium Plan ($40) -->
+
           <div class="pricing-card featured">
+
             <span class="pricing-badge">Most Popular</span>
+
             <div>
+
               <span class="badge badge-success">Comprehensive Package</span>
+
               <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 0.35rem;">Premium</h3>
+
               <p style="color: #64748b; font-size: 0.95rem; line-height: 1.5;">
+
                 Maximum safety buffer and in-depth bug analysis for serious commercial apps.
+
               </p>
+
               <div style="margin: 1.25rem 0;">
+
                 <span style="font-size: 1.1rem; text-decoration: line-through; color: #94a3b8; margin-right: 0.5rem;">$60</span>
+
                 <span class="price-val" style="color: var(--brand-primary);">$40</span>
+
                 <span class="price-sub">per release / one-time</span>
+
               </div>
+
               <ul class="pricing-features">
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>50 Real Human Testers</strong></span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Production Access Guarantee</strong></span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Senior Account Supervisor</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Extended 20-Day Closed Testing</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Advanced Feedback &amp; Bug Analysis</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Dedicated App Specialist</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Tested on 50+ Real Android Devices</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Comprehensive UI/UX &amp; User Flow Testing</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Up To 30 Minutes Testing Per Device Daily</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>High-End Android Devices (Android 7&ndash;16)</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Monitoring With Video Evidence</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Logs With Fix Suggestions</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Bug Reports With Recording Evidence</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Step-by-Step Bug Reproduction Details</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Installation, Update &amp; First-Launch Testing</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Performance Observations &amp; Optimization Suggestions</span></li>
+
                 <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Detailed Final Testing &amp; Play Store Compliance Report</span></li>
+
               </ul>
+
             </div>
+
             <div style="margin-top: 1.5rem;">
+
               <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.825rem; color: #166534; font-weight: 600; text-align: center; margin-bottom: 1rem;">
+
                 Get Production Access &mdash; Or Your Money Back!
+
               </div>
+
               <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=pricing_premium" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">
+
                 Visit Official Website &rarr;
+
               </a>
+
             </div>
+
           </div>
 
+
+
         </div>
+
       </div>
+
     </section>
+
+
 
       <!-- SECTION 11 & 12: ABOUT & FACTS -->
+
     <section class="section" id="about">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Who We Are</div>
+
           <h2>Built by Mobile Developers Who Faced the Same 14-Day Roadblock</h2>
+
           <p class="section-lead">
+
             We started 12 Testers For 14 Days after experiencing how frustrating it was to coordinate 12 people for two continuous weeks. Today, our global community supports hundreds of indie developers each month.
+
           </p>
+
         </div>
+
+
 
         <div class="card" style="padding: 2.5rem 2rem; max-width: 900px; margin: 0 auto;">
+
           <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1.5rem; text-align: center;">Facts about 12 Testers For 14 Days Fleet</h3>
+
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+
             <div>
+
               <div style="font-size: 2.25rem; font-weight: 800; color: var(--brand-primary); font-family: var(--font-mono);">40+</div>
+
               <div style="color: #64748b; font-size: 0.9rem; margin-top: 0.25rem;">Countries Represented</div>
+
             </div>
+
             <div>
+
               <div style="font-size: 2.25rem; font-weight: 800; color: #16a34a; font-family: var(--font-mono);">Android 10 - 15</div>
+
               <div style="color: #64748b; font-size: 0.9rem; margin-top: 0.25rem;">OS Versions Supported</div>
+
             </div>
+
             <div>
+
               <div style="font-size: 2.25rem; font-weight: 800; color: #d97706; font-family: var(--font-mono);">100%</div>
+
               <div style="color: #64748b; font-size: 0.9rem; margin-top: 0.25rem;">Physical Smartphones Only</div>
+
             </div>
+
             <div>
+
               <div style="font-size: 2.25rem; font-weight: 800; color: #8b5cf6; font-family: var(--font-mono);">&lt; 8 Hours</div>
+
               <div style="color: #64748b; font-size: 0.9rem; margin-top: 0.25rem;">Average Onboarding Window</div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 13: STRICTLY THE 16 FAQS -->
+
     <section class="section section-alt" id="faq">
+
       <div class="container">
+
         <div class="section-header text-center">
+
           <div class="badge">Common Questions</div>
+
           <h2>Frequently Asked Questions: Everything You Need to Know</h2>
+
           <p class="section-lead">
+
             Here are clear, simple answers to the most common questions about closed testing and our service:
+
           </p>
+
         </div>
+
+
 
         <div class="faq-list">
+
           
+
           <details class="faq-item">
+
             <summary>1. Is Google Play production access guaranteed after closed testing?</summary>
+
             <div class="faq-body">
+
               We maintain an industry-leading 99.8% approval rate. Our real testers actively use your app throughout the 14 days so you fulfill Google's engagement requirements.<br><br>
+
               Please note that TWA (Trusted Web Activity) apps have higher scrutiny from Google; we suggest converting TWAs into standard WebView during testing to maximize approval odds.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>2. What happens if Google rejects my production access request? Can I get a refund?</summary>
+
             <div class="faq-body">
+
               Yes, completely! If Google does not approve your production access request after completing your test with us, you can choose between an immediate 100% full refund or a free 14-day retest cohort.<br><br>
+
               However, this refund policy does not cover TWA apps because Google often rejects them even when testers have actively used the app. If you have a TWA app, you must convert it to WebView before starting a free retest.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>3. Does testing start as soon as I make a payment?</summary>
+
             <div class="faq-body">
+
               Testing starts after a short onboarding process. Once you place your order, a dedicated supervisor will contact you through email or WhatsApp within 30 minutes to 8 hours.<br><br>
+
               Our testers are real people, not automated bots, so installation depends on our working hours. After receiving your app link, it usually takes a few hours for all 12 testers to install the app on their devices and begin testing.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>4. What if some testers leave during the 14-day testing period?</summary>
+
             <div class="faq-body">
+
               We provide additional testers as a safety buffer to help maintain the required number of active testers.<br><br>
+
               For example, our Starter package includes 12 testers, while our higher packages provide additional tester allocations. This helps reduce the risk of falling below Google's minimum requirement if someone leaves or opts out.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>5. What is Google's 14-day closed testing requirement?</summary>
+
             <div class="faq-body">
+
               Google requires developers with personal developer accounts created after November 13, 2023, to complete at least 14 days of closed testing before applying for production access.<br><br>
+
               During this period, at least 12 testers must remain opted in to your closed test continuously for 14 days. This helps developers collect feedback, find problems, and improve their apps before making them available to the public.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>6. When does the 14-day testing period start and end?</summary>
+
             <div class="faq-body">
+
               Your testing period follows a continuous 14-day schedule. Our team carries out daily launch checks to help ensure testers continue opening and using your app throughout the testing period.<br><br>
+
               This helps maintain consistent testing activity while giving you time to review feedback and make improvements.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>7. Will testers actually open and use my app every day?</summary>
+
             <div class="faq-body">
+
               Yes! Our testers actively open and use your app throughout the 14-day testing period. They explore its screens, navigate through its features, and check its main functions.<br><br>
+
               This helps maintain regular testing activity and gives you a better understanding of how your app works on real devices.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>8. Can I update my app while closed testing is in progress?</summary>
+
             <div class="faq-body">
+
               Yes! You can release new app updates during the 14-day testing period. Your testing timer will not reset just because you publish an update.<br><br>
+
               Our testers can install the latest version and continue testing without restarting the entire process.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>9. Do I have to release an update during the 14-day testing period?</summary>
+
             <div class="faq-body">
+
               No, releasing an update is not compulsory. However, if testers find bugs or other problems, we recommend fixing them and publishing an updated version.<br><br>
+
               We generally suggest releasing an update between testing days 6 and 12 when improvements are needed. This is a recommendation, not a Google requirement.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>10. How do your testers help improve my app?</summary>
+
             <div class="faq-body">
+
               Our testers use real Android devices to explore your app and check its main functions. They can help identify problems such as crashes, navigation issues, layout problems, and other usability concerns.<br><br>
+
               You also receive private feedback, daily testing activity, and testing reports to help you understand where your app may need improvement.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>11. How do you track tester activity during the 14 days?</summary>
+
             <div class="faq-body">
+
               Our supervision team coordinates with testers daily to make sure they launch your app and explore its features. We monitor opt-in status in Play Console and track usage reports to ensure Google's continuous engagement criteria are fully satisfied.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>12. What information do I need to provide to get started?</summary>
+
             <div class="faq-body">
+
               You only need to provide your closed testing track opt-in link from Google Play Console (either web link or Android link) and ensure your release is approved for testing. You do not need to share passwords or developer account access.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>13. How does the 14-day testing dashboard work?</summary>
+
             <div class="faq-body">
+
               Your testing dashboard displays real-time milestones: days completed, number of active opted-in testers, daily activity logs, and actionable recommendations so you always know where your test stands.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>14. Can you help me answer Google's 7 production access questions?</summary>
+
             <div class="faq-body">
+
               Yes! When your 14 days are complete, we provide customized, proven answers for Google's 7 production access questions based on the real feedback and metrics gathered during your closed test.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>15. What countries are your testers located in?</summary>
+
             <div class="faq-body">
+
               Our testing fleet spans over 40 countries across North America, Europe, Asia, and Latin America. This gives your app natural geographic device and IP diversity that Google's automated systems expect.
+
             </div>
+
           </details>
 
+
+
           <details class="faq-item">
+
             <summary>16. How do I know if my developer account needs 12 testers for 14 days?</summary>
+
             <div class="faq-body">
+
               If you created your personal Google Play Console developer account on or after November 13, 2023, Google requires you to run a closed test with at least 12 testers opted in for 14 consecutive days before you can apply for production access.
+
             </div>
+
           </details>
+
+
 
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- SECTION 14: FINAL CALL TO ACTION -->
+
     <section class="section" style="text-align: center; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
+
       <div class="container" style="max-width: 780px;">
+
         <div class="badge badge-success" style="margin-bottom: 1.25rem;">
+
           <span class="pulse-dot-green"></span> Ready to Launch?
+
         </div>
+
         <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); color: #0f172a; margin-bottom: 1.25rem; font-weight: 800;">
+
           Launch Your 12 Testers For 14 Days Test with Guaranteed Approval
+
         </h2>
+
         <p style="font-size: 1.15rem; color: #475569; line-height: 1.7; margin-bottom: 2.25rem;">
+
           Stop chasing friends or risking your account with bot swap groups. Get real, verified Android testers on genuine smartphones today.
+
         </p>
+
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+
           <a href="#pricing" class="btn btn-primary btn-lg">Get 12 Testers For 14 Days ($20) &rarr;</a>
+
           <a href="https://wa.me/923394001479?text=Hi%2C%20I%20want%20to%20start%20my%2012%20testers%20for%2014%20days%20test" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+
             <span class="pulse-dot-green"></span> Chat on WhatsApp
+
           </a>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+
   <!-- Site Footer -->
+
   <footer class="site-footer">
+
     <div class="container">
+
       <div class="footer-grid">
+
         <div class="footer-brand">
+
           <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-            <svg class="logo-svg" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <svg class="logo-svg" width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
-                <linearGradient id="gpFtrGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <linearGradient id="gpFtrGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stop-color="#0284c7"/>
                   <stop offset="50%" stop-color="#2563eb"/>
                   <stop offset="100%" stop-color="#4f46e5"/>
                 </linearGradient>
-                <linearGradient id="gpFtrBadge" x1="16" y1="16" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#16a34a"/>
-                  <stop offset="100%" stop-color="#059669"/>
+                <linearGradient id="gpFtrBadge" x1="22" y1="21" x2="34" y2="33" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#10b981"/>
+                  <stop offset="100%" stop-color="#047857"/>
                 </linearGradient>
+                <filter id="gpFtrGlow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.22"/>
+                </filter>
               </defs>
-              <path d="M6 5.8C6 4.4 7.5 3.5 8.7 4.2L23.5 13.4C24.7 14.1 24.7 15.9 23.5 16.6L8.7 25.8C7.5 26.5 6 25.6 6 24.2V5.8Z" fill="url(#gpFtrGrad)"/>
-              <circle cx="22" cy="22" r="7.5" fill="#ffffff"/>
-              <circle cx="22" cy="22" r="6" fill="url(#gpFtrBadge)"/>
-              <path d="M19.2 22L21.2 24L24.8 19.8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect width="40" height="40" rx="10" fill="url(#gpFtrGrad)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+              <path d="M12.5 10.5C12.5 9.4 13.7 8.7 14.6 9.3L26 16.8C26.9 17.4 26.9 18.6 26 19.2L14.6 26.7C13.7 27.3 12.5 26.6 12.5 25.5V10.5Z" fill="#ffffff" filter="url(#gpFtrGlow)"/>
+              <path d="M12.5 10.5L20 18L12.5 25.5" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="28.5" cy="27.5" r="7.5" fill="#ffffff"/>
+              <circle cx="28.5" cy="27.5" r="6" fill="url(#gpFtrBadge)"/>
+              <path d="M25.7 27.5L27.7 29.5L31.3 25.2" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+
             <div class="logo-text-group">
+
               <span class="logo-text"><strong>12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
+
               <span class="logo-byline">
+
                 <span class="by-text">by</span>
+
                 <img src="/assets/ACL_Logo_Light_theme.png" alt="AppConsoleLab" class="acl-sublogo" width="120" height="40">
+
               </span>
+
             </div>
+
           </a>
+
           <p class="footer-desc">
+
             Professional Google Play closed testing cohort service for personal developer accounts. We provide real Android testers active across 14 consecutive days to ensure smooth production access approval.
+
           </p>
+
         </div>
 
+
+
         <div class="footer-col">
+
           <h4 class="footer-heading">Service</h4>
+
           <ul class="footer-links">
+
             <li><a href="#how-it-works">How It Works</a></li>
+
             <li><a href="#pricing">Pricing &amp; Plans</a></li>
+
             <li><a href="#reviews">Customer Reviews</a></li>
+
             <li><a href="#faq">FAQs</a></li>
+
             <li><a href="/guides/">Guides Hub</a></li>
+
           </ul>
+
         </div>
 
+
+
         <div class="footer-col">
+
           <h4 class="footer-heading">Compliance</h4>
+
           <ul class="footer-links">
+
             <li><a href="#guide">14-Day Rule</a></li>
+
             <li><a href="#compare">Real Phones vs Bots</a></li>
+
             <li><a href="#why-price">Why $20 Fee</a></li>
+
             <li><a href="#about">About Us</a></li>
+
           </ul>
+
         </div>
 
+
+
         <div class="footer-col">
+
           <h4 class="footer-heading">Support</h4>
+
           <ul class="footer-links">
+
             <li><a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+
             <li><a href="mailto:support@appconsolelab.com">support@appconsolelab.com</a></li>
+
             <li><a href="https://www.trustpilot.com/review/appconsolelab.com" target="_blank" rel="noopener noreferrer">Trustpilot Reviews</a></li>
+
           </ul>
+
         </div>
+
       </div>
+
+
 
       <div class="footer-bottom">
+
         <p>&copy; 2026 12 Testers For 14 Days. Powered by AppConsoleLab. All rights reserved. Google Play and Android are trademarks of Google LLC.</p>
+
       </div>
+
     </div>
+
   </footer>
 
+
+
   <!-- Scripts -->
+
   <script>
+
     document.addEventListener('DOMContentLoaded', function() {
+
       var toggle = document.getElementById('menuToggle');
+
       var nav = document.getElementById('mainNav');
+
       if (toggle && nav) {
+
         toggle.addEventListener('click', function() {
+
           var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
           toggle.setAttribute('aria-expanded', !isExpanded);
+
           nav.classList.toggle('is-open');
+
           var hamburger = toggle.querySelector('.hamburger-icon');
+
           var closeIcon = toggle.querySelector('.close-icon');
+
           if (hamburger && closeIcon) {
+
             hamburger.style.display = isExpanded ? 'block' : 'none';
+
             closeIcon.style.display = isExpanded ? 'none' : 'block';
+
           }
+
         });
+
       }
+
     });
+
   </script>
+
 </body>
+
 </html>
+

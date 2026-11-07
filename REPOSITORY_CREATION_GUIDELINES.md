@@ -37,3 +37,17 @@
 - Target the exact primary keyword in `<title>`, `<meta name="description">`, `<h1>`, and throughout headings and body copy naturally.
 - Implement 100% valid JSON-LD schemas (`Organization`, `WebSite`, `Service`, `HowTo`, `BreadcrumbList`, `FAQPage`, `Product`).
 - Ensure canonical URL, favicon, OpenGraph, and Twitter tags match the target domain.
+
+---
+
+### 5. Modern Logo & Brand Asset Standards
+- **Emblem / Icon Design**:
+  - Use modern, high-precision SVG vector geometry with smooth rounded squircle containers (`rx="10"` on a 40x40 scale or `rx="16"` on a 64x64 scale).
+  - Use rich, multi-stop tech gradients (e.g. Electric Sky `#0284c7` -> Sapphire `#2563eb` -> Indigo `#4f46e5`) paired with subtle top-lit inner highlight strokes (`rgba(255, 255, 255, 0.3)`) and refined elevation shadows (`drop-shadow(0 3px 8px rgba(37, 99, 235, 0.22))`).
+  - Feature clear, legible symbols (e.g. a crisp Google Play silhouette with faceted glass line and an emerald 14-day verified badge).
+- **Wordmark & Typography**:
+  - Use high-precision tracking (`letter-spacing: -0.028em` to `-0.03em`) on display headings.
+  - Deep carbon `#0f172a` for primary brand name and modern vibrant gradient text (`linear-gradient(135deg, #0284c7 0%, #2563eb 52%, #4f46e5 100%)`) for accent phrasing.
+  - Sublogo metadata: Clean uppercase tracking (`font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; color: #94a3b8;`) for "BY" with crisp `40px` height for parent company brand marks.
+- **Consistency Across Assets**:
+  - `favicon.svg`, `assets/logo.svg`, `assets/og-image.svg`, and in-page navigation/footer icons must share identical geometry, color palettes, and visual hierarchy.
