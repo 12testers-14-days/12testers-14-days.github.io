@@ -258,44 +258,50 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   text-decoration: none;
 }
 
 .logo-svg {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
 }
 
 .logo-text-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .logo-text {
-  font-size: 1.25rem;
-  line-height: 1.15;
+  font-size: 1.15rem;
+  line-height: 1.1;
   color: var(--text-main);
-  white-space: nowrap;
+}
+
+.logo-text strong {
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.logo-accent {
+  color: var(--brand-primary);
+  font-weight: 700;
 }
 
 .logo-byline {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 500;
+  gap: 0.35rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .by-text {
-  font-size: 0.825rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
-  text-transform: lowercase;
 }
 
 .acl-sublogo {
@@ -306,6 +312,19 @@ a:hover {
   display: inline-block;
   object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .site-header {
   position: sticky;
   top: 0;
@@ -329,9 +348,9 @@ a:hover {
 
 
 
-.logo-text strong { font-weight: 800; color: var(--text-main); }
 
-.logo-accent { color: var(--brand-primary); font-weight: 700; }
+
+
 
 
 
@@ -1023,12 +1042,8 @@ a:hover {
 }
 
 @media (max-width: 540px) {
-  .acl-sublogo {
-    height: 34px;
-  }
-  .logo-text {
-    font-size: 1.1rem;
-  }
+  
+  
 }
 
   </style>
@@ -1061,7 +1076,7 @@ a:hover {
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-        <svg class="logo-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo-svg" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <linearGradient id="gpLogoGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#0284c7"/>
@@ -1202,7 +1217,7 @@ a:hover {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-            <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="logo-svg" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
                 <linearGradient id="gpFtrGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stop-color="#0284c7"/>
