@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Play Closed Testing Guides & Developer Documentation | 12 Testers For 14 Days</title>
-  <meta name="description" content="Technical documentation and compliance guides for Google Play's 12 testers for 14 days closed testing requirement. Stay updated with production access standards.">
+  <meta name="description" content="Helpful guides and walkthroughs for Google Play's 12 testers for 14 days closed testing requirement. Stay updated with production access standards.">
   <link rel="canonical" href="https://12testers-14-days.github.io/guides/">
   <meta name="robots" content="index, follow">
   
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Google Play Closed Testing Guides | 12 Testers For 14 Days">
-  <meta property="og:description" content="Technical documentation and compliance guides for Google Play's 12 testers for 14 days closed testing requirement.">
+  <meta property="og:description" content="Helpful guides and walkthroughs for Google Play's 12 testers for 14 days closed testing requirement.">
   <meta property="og:url" content="https://12testers-14-days.github.io/guides/">
   <meta property="og:site_name" content="12 Testers For 14 Days">
   <meta property="og:image" content="https://12testers-14-days.github.io/assets/og-image.svg">
@@ -19,1568 +19,922 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <style>
-
-
-    :root {
-      --bg-dark: #070b14;
-      --bg-surface: #0f172a;
-      --bg-card: #111a33;
-      --bg-card-hover: #162447;
-      --bg-alt: #0f172a;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.08);
-      --border-highlight: rgba(56, 189, 248, 0.45);
-      --border-glow: 0 0 25px rgba(56, 189, 248, 0.2);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --brand-primary: #38bdf8;
-      --primary: #38bdf8;
-      --primary-hover: #0284c7;
-      --brand-secondary: #818cf8;
-      --brand-accent: #6366f1;
-      --brand-gradient: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
-      --brand-gradient-hover: linear-gradient(135deg, #7dd3fc 0%, #818cf8 100%);
-      --card-gradient: linear-gradient(180deg, rgba(19, 29, 53, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
-      --whatsapp-color: #25d366;
-      --whatsapp-glow: rgba(37, 211, 102, 0.4);
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-heading: 'Space Grotesk', var(--font-sans);
-      --font-mono: 'JetBrains Mono', monospace;
-      --container-max: 1200px;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --radius-xl: 24px;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-      --shadow-glow: 0 0 35px rgba(56, 189, 248, 0.2);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Container & Layout */
-    .container {
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .section {
-      padding: 5rem 0;
-      position: relative;
-    }
-
-    .section-sm {
-      padding: 3rem 0;
-    }
-
-    .section-alt {
-      background-color: rgba(15, 23, 42, 0.55);
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      backdrop-filter: blur(12px);
-    }
-
-    /* Specific Section Wrappers */
-    .numbers-sec, .about-sec, .timeline-sec, .method-sec, 
-    .why-price-sec, .compare-sec, .chapters-sec, .reviews-sec {
-      padding: 5rem 0;
-      position: relative;
-    }
-
-    .numbers-sec {
-      background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(15, 23, 42, 0.6) 100%);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    /* Typography */
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-heading);
-      color: #ffffff;
-      line-height: 1.25;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 5vw, 3.8rem);
-      margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      margin-bottom: 1.25rem;
-      color: #ffffff;
-    }
-
-    h3 {
-      font-size: 1.35rem;
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    p.lead, .lead-text {
-      font-size: 1.22rem;
-      color: #cbd5e1;
-      line-height: 1.7;
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    a {
-      color: var(--brand-primary);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    a:hover {
-      color: #7dd3fc;
-    }
-
-    code, pre {
-      font-family: var(--font-mono);
-      font-size: 0.9em;
-    }
-
-    /* ========================================= */
-    /* SITE HEADER & NAVIGATION */
-    /* ========================================= */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 11, 20, 0.96);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 66px;
-      width: 100%;
-      position: relative;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      text-decoration: none !important;
-      user-select: none;
-      flex-shrink: 0;
-    }
-
-    .logo-svg {
-      flex-shrink: 0;
-      display: block;
-      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.35));
-      transition: transform 0.25s ease;
-    }
-
-    .logo:hover .logo-svg {
-      transform: scale(1.06);
-    }
-
-    .logo-text {
-      display: inline-flex;
-      align-items: baseline;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.025em;
-      line-height: 1;
-      white-space: nowrap;
-      gap: 0.35rem;
-    }
-
-    .logo-title {
-      color: #ffffff;
-      font-weight: 800;
-    }
-
-    .logo-accent {
-      background: var(--brand-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 800;
-    }
-
-    /* Desktop Navigation (min-width: 993px) */
-    @media (min-width: 993px) {
-      .mobile-menu-toggle {
-        display: none !important;
-      }
-      .main-nav {
-        display: flex !important;
-        align-items: center !important;
-        gap: 1.5rem !important;
-      }
-      .nav-list {
-        display: flex !important;
-        align-items: center !important;
-        gap: 1.35rem !important;
-        list-style: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      .nav-link {
-        color: var(--text-muted) !important;
-        font-weight: 500 !important;
-        font-size: 0.92rem !important;
-        padding: 0.35rem 0 !important;
-        position: relative !important;
-        text-decoration: none !important;
-        white-space: nowrap !important;
-        transition: color 0.2s ease !important;
-      }
-      .nav-link:hover, .nav-link.active {
-        color: #ffffff !important;
-      }
-      .nav-link.active::after {
-        content: '' !important;
-        position: absolute !important;
-        bottom: -6px !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 2px !important;
-        background: var(--brand-gradient) !important;
-        border-radius: 2px !important;
-        box-shadow: 0 0 8px var(--brand-primary) !important;
-      }
-      .btn-text-mobile {
-        display: none !important;
-      }
-      .btn-text-desktop {
-        display: inline !important;
-      }
-      .nav-cta-btn {
-        padding: 0.5rem 1.15rem !important;
-        font-size: 0.88rem !important;
-        border-radius: 9999px !important;
-        white-space: nowrap !important;
-        gap: 0.45rem !important;
-      }
-    }
-
-    /* Mobile Direct Vertical Dropdown Menu (max-width: 992px) */
-    @media (max-width: 992px) {
-      .logo-badge {
-        display: none !important;
-      }
-      .mobile-menu-toggle {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 42px !important;
-        height: 42px !important;
-        padding: 0 !important;
-        background: rgba(255, 255, 255, 0.06) !important;
-        border: 1px solid var(--border-color) !important;
-        border-radius: var(--radius-sm) !important;
-        color: #ffffff !important;
-        cursor: pointer !important;
-        transition: all 0.2s ease !important;
-        flex-shrink: 0 !important;
-      }
-      .mobile-menu-toggle:hover {
-        background: rgba(56, 189, 248, 0.15) !important;
-        border-color: var(--brand-primary) !important;
-        color: var(--brand-primary) !important;
-      }
-
-      /* Direct vertical dropdown container beneath header - NO SLIDER */
-      .main-nav {
-        display: none;
-        position: absolute !important;
-        top: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        background: #090e1a !important;
-        border-bottom: 2px solid var(--brand-primary) !important;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85) !important;
-        padding: 1rem 1.25rem 1.5rem !important;
-        box-sizing: border-box !important;
-        z-index: 9999 !important;
-      }
-
-      .main-nav.active {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1.25rem !important;
-      }
-
-      /* Directly showing vertically: clean stacked list */
-      .nav-list {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-      }
-
-      .nav-list li {
-        width: 100% !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
-      }
-
-      .nav-link {
-        display: block !important;
-        width: 100% !important;
-        padding: 0.85rem 0.5rem !important;
-        font-size: 1.08rem !important;
-        font-weight: 600 !important;
-        color: #f1f5f9 !important;
-        text-decoration: none !important;
-        transition: all 0.2s ease !important;
-        box-sizing: border-box !important;
-      }
-
-      .nav-link:hover, .nav-link.active {
-        color: var(--brand-primary) !important;
-        padding-left: 0.75rem !important;
-      }
-
-      .nav-link.active {
-        background: rgba(56, 189, 248, 0.08) !important;
-        border-left: 3px solid var(--brand-primary) !important;
-      }
-
-      .nav-cta-wrap {
-        width: 100% !important;
-        margin-top: 0.5rem !important;
-      }
-
-      .btn-text-desktop {
-        display: none !important;
-      }
-      .btn-text-mobile {
-        display: inline !important;
-      }
-
-      .nav-cta-btn {
-        width: 100% !important;
-        padding: 0.85rem 1.25rem !important;
-        font-size: 1rem !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-        border-radius: var(--radius-md) !important;
-      }
-    }
-
-    /* ========================================= */
-    /* BUTTONS & BADGES */
-    /* ========================================= */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      padding: 0.85rem 1.75rem;
-      border-radius: var(--radius-md);
-      font-weight: 600;
-      font-size: 0.98rem;
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid transparent;
-      text-decoration: none !important;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .btn-primary {
-      background: var(--brand-gradient);
-      color: #ffffff !important;
-      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.55);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.04);
-      color: #ffffff !important;
-      border-color: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.35);
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background: var(--whatsapp-color);
-      color: #ffffff !important;
-      box-shadow: 0 4px 18px var(--whatsapp-glow);
-    }
-
-    .btn-whatsapp:hover {
-      background: #20bd5a;
-      box-shadow: 0 8px 26px rgba(37, 211, 102, 0.6);
-      transform: translateY(-2px);
-    }
-
-    .pulse-dot {
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #ffffff;
-      animation: pulse 1.8s infinite;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 10px #ffffff; }
-      100% { transform: scale(0.9); opacity: 0.8; }
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--brand-primary);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      margin-bottom: 1.25rem;
-    }
-
-    .badge-success {
-      background: rgba(16, 185, 129, 0.12);
-      color: var(--success);
-      border-color: rgba(16, 185, 129, 0.3);
-    }
-
-    /* ========================================= */
-    /* HERO SECTION (TIGHTENED TOP SPACING) */
-    /* ========================================= */
-    .hero {
-      padding: 2.25rem 0 4rem; /* Tightened from 6.5rem to eliminate wasted space */
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.14) 0%, rgba(7, 11, 20, 0.98) 70%);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .hero-content {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-    }
-
-    .hero-content .badge {
-      margin-top: 0 !important;
-      margin-bottom: 1.25rem !important;
-    }
-
-    .hero-actions, .hero-ctas {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.25rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    /* Stats Bar (Dashboard Widget) */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      background: linear-gradient(135deg, rgba(17, 26, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: var(--radius-xl);
-      margin: 3rem auto 1rem;
-      max-width: 980px;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.15);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      position: relative;
-      box-sizing: border-box;
-    }
-
-    .stats-bar::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--brand-gradient);
-    }
-
-    .stat-item {
-      padding: 1.85rem 1.5rem;
-      text-align: center;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-sizing: border-box;
-    }
-
-    .stat-item:last-child {
-      border-right: none;
-    }
-
-    .stat-item:hover {
-      background: rgba(56, 189, 248, 0.06);
-    }
-
-    .stat-value {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 0.35rem;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-
-    /* Cards & Grids */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      box-sizing: border-box;
-    }
-
-    .card:hover {
-      border-color: var(--border-highlight);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-glow);
-      background: var(--bg-card-hover);
-    }
-
-    /* Metric Cards (No clipping, large gradient digits) */
-    .metric-card {
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-
-    .metric-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--brand-gradient);
-    }
-
-    .metric-top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-
-    .metric-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: var(--brand-primary);
-    }
-
-    .metric-pill-success {
-      background: rgba(16, 185, 129, 0.12);
-      border-color: rgba(16, 185, 129, 0.35);
-      color: var(--success);
-    }
-
-    .metric-icon {
-      font-size: 1.4rem;
-    }
-
-    .metric-number, .metric-display {
-      font-family: var(--font-heading);
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-      display: inline-block;
-      padding-right: 0.15em;
-      overflow: visible;
-    }
-
-    /* Facts Grid */
-    .facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-
-    .fact-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.75rem;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .fact-box:hover {
-      border-color: var(--border-highlight);
-      transform: translateY(-4px);
-    }
-
-    .fact-title {
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Step Timeline */
-    .step-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-      list-style: none;
-      padding: 0;
-    }
-
-    .step-item {
-      display: flex;
-      gap: 1.75rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      align-items: flex-start;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .step-item:hover {
-      border-color: var(--border-highlight);
-      transform: translateX(4px);
-    }
-
-    .step-num {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--brand-gradient);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
-    }
-
-    .step-content {
-      min-width: 0;
-      flex: 1;
-    }
-
-    .step-content h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
-
-    .step-content p {
-      margin-bottom: 0;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    /* Chapter Cards */
-    .chapter-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      margin-bottom: 1.75rem;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-    }
-
-    .chapter-card:hover {
-      border-color: var(--border-highlight);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-glow);
-      background: var(--bg-card-hover);
-    }
-
-    .chapter-card h2, .chapter-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 0.85rem;
-      color: #ffffff;
-    }
-
-    .chapter-card p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .chapter-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* FAQ Section */
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin-top: 2.5rem;
-    }
-
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.75rem;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .faq-item:hover {
-      border-color: rgba(56, 189, 248, 0.3);
-    }
-
-    .faq-item h3, .faq-item h4 {
-      font-size: 1.2rem;
-      color: #ffffff;
-      margin-bottom: 0.75rem;
-    }
-
-    .faq-body p, .faq-item p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    /* Pricing Section */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-      align-items: stretch;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .pricing-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-xl);
-      padding: 2.75rem 2rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      box-sizing: border-box;
-      width: 100%;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(56, 189, 248, 0.4);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 0 0 25px rgba(56, 189, 248, 0.15);
-    }
-
-    .pricing-featured {
-      background: linear-gradient(180deg, #162447 0%, #111a33 100%);
-      border: 2px solid var(--brand-primary);
-      box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
-      transform: scale(1.03);
-    }
-
-    .pricing-featured:hover {
-      transform: scale(1.03) translateY(-6px);
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--brand-gradient);
-      color: #ffffff;
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.35rem 1.15rem;
-      border-radius: 9999px;
-      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.45);
-      white-space: nowrap;
-    }
-
-    .pricing-plan-name {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-
-    .pricing-price {
-      font-size: 3.2rem;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1;
-      margin: 1.25rem 0 0.5rem;
-    }
-
-    .pricing-price span {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .pricing-features {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      flex-grow: 1;
-    }
-
-    .pricing-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.98rem;
-      color: #cbd5e1;
-    }
-
-    .pricing-features li svg {
-      width: 18px;
-      height: 18px;
-      color: var(--success);
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-
-    /* Floating WhatsApp Button (Pure Icon Only) */
-    .floating-wa, .floating-whatsapp {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--whatsapp-color);
-      color: #ffffff !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
-      z-index: 9999;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      text-decoration: none !important;
-    }
-
-    .floating-wa:hover, .floating-whatsapp:hover {
-      transform: scale(1.1) translateY(-2px);
-      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.65);
-      background: #20bd5a;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #05080f;
-      border-top: 1px solid var(--border-color);
-      padding: 4.5rem 0 2.5rem;
-      margin-top: 4.5rem;
-      width: 100%;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3.5rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .footer-brand p {
-      color: var(--text-muted);
-      margin: 1.25rem 0 1.5rem;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .footer-heading {
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover {
-      color: #ffffff;
-      padding-left: 3px;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding-top: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: var(--text-dim);
-      font-size: 0.88rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-disclaimer {
-      margin-top: 1.5rem;
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      line-height: 1.6;
-      border-top: 1px solid rgba(255, 255, 255, 0.04);
-      padding-top: 1.5rem;
-    }
-
-    /* Breadcrumbs */
-    .breadcrumbs {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-    }
-
-    .breadcrumbs a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    .breadcrumbs a:hover {
-      color: var(--brand-primary);
-    }
-
-    /* ========================================= */
-    /* DEVELOPER GUIDES & DOCUMENTATION STYLING  */
-    /* ========================================= */
-    .quick-answer {
-      background: linear-gradient(145deg, rgba(17, 26, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-left: 4px solid var(--brand-primary);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem 2rem;
-      margin: 2rem 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(56, 189, 248, 0.08);
-      position: relative;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-
-    .quick-answer-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--brand-primary);
-      margin-bottom: 1rem;
-      line-height: 1.35;
-    }
-
-    .quick-answer-title span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      min-width: 32px;
-      border-radius: 8px;
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
-      font-size: 1.1rem;
-      line-height: 1;
-    }
-
-    .quick-answer p {
-      color: #e2e8f0;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      margin-bottom: 0.85rem;
-    }
-
-    .quick-answer p:last-child {
-      margin-bottom: 0;
-    }
-
-    .callout {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--brand-primary);
-      border-radius: var(--radius-md);
-      padding: 1.5rem 1.75rem;
-      margin: 1.75rem 0;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-      box-sizing: border-box;
-    }
-
-    .callout-warning {
-      border-left-color: var(--warning);
-      background: rgba(245, 158, 11, 0.08);
-      border-color: rgba(245, 158, 11, 0.25);
-    }
-
-    .callout-title {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #ffffff;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .callout-warning .callout-title {
-      color: #fbbf24;
-    }
-
-    .callout p {
-      color: #cbd5e1;
-      font-size: 0.98rem;
-      line-height: 1.7;
-      margin-bottom: 0.75rem;
-    }
-
-    .callout p:last-child {
-      margin-bottom: 0;
-    }
-
-    .card-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      border-radius: var(--radius-md);
-      font-size: 1.25rem;
-      font-weight: 800;
-      line-height: 1;
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--brand-primary);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      margin-bottom: 1.25rem;
-      flex-shrink: 0;
-      box-sizing: border-box;
-    }
-
-    .table-wrap {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin: 2rem 0;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      background: var(--bg-card);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-      box-sizing: border-box;
-    }
-
-    table {
-      width: 100%;
-      min-width: 580px;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.95rem;
-      border-spacing: 0;
-    }
-
-    th {
-      background: rgba(15, 23, 42, 0.95);
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      padding: 1rem 1.25rem;
-      border-bottom: 2px solid var(--border-color);
-      letter-spacing: -0.01em;
-    }
-
-    td {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-muted);
-      line-height: 1.6;
-      vertical-align: top;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:nth-child(even) td {
-      background: rgba(255, 255, 255, 0.015);
-    }
-
-    /* Global media protections */
-    img, svg {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* ========================================= */
-    /* RESPONSIVE DESIGN BREAKPOINTS */
-    /* ========================================= */
-
-    @media (max-width: 992px) {
-      .pricing-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5rem !important;
-      }
-      .pricing-featured {
-        grid-column: span 2 !important;
-        transform: none !important;
-      }
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 2.5rem !important;
-      }
-    }
-
-    /* Mobile Breakpoint (max-width: 768px) */
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1.25rem !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-
-      .section, .numbers-sec, .about-sec, .timeline-sec, 
-      .method-sec, .why-price-sec, .compare-sec, .chapters-sec, .reviews-sec {
-        padding: 3rem 0 !important;
-      }
-
-      /* Hero Section Mobile - TIGHTENED TOP SPACING */
-      .hero {
-        padding: 1.25rem 0 3rem !important; /* Zero extra space between header and badge */
-      }
-
-      .hero-content .badge {
-        margin-top: 0 !important;
-        margin-bottom: 1rem !important;
-      }
-
-      .hero-actions, .hero-ctas {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 0.85rem !important;
-      }
-
-      .hero-actions .btn, .hero-ctas .btn {
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-
-      /* Button Mobile Width Fix: Never overflow or push space to the right */
-      .btn {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        white-space: normal !important;
-        text-align: center !important;
-        word-break: break-word !important;
-        padding: 0.85rem 1.25rem !important;
-      }
-
-      /* Stats Bar Mobile 2x2 Grid (No clipping, clean borders) */
-      .stats-bar {
-        grid-template-columns: repeat(2, 1fr) !important;
-        margin: 2rem auto 1rem !important;
-        box-sizing: border-box !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        border-radius: var(--radius-lg) !important;
-      }
-
-      .stat-item {
-        padding: 1.25rem 0.75rem !important;
-        min-width: 0 !important;
-        box-sizing: border-box !important;
-      }
-
-      .stat-item:nth-child(2) {
-        border-right: none !important;
-      }
-
-      .stat-item:nth-child(1), .stat-item:nth-child(2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-      }
-
-      .stat-value {
-        font-size: 1.75rem !important;
-        word-break: break-word !important;
-      }
-
-      .stat-label {
-        font-size: 0.78rem !important;
-        word-break: break-word !important;
-      }
-
-      /* Metric Cards Mobile (Zero digit clipping) */
-      .metric-card {
-        padding: 1.75rem 1.25rem !important;
-        box-sizing: border-box !important;
-        width: 100% !important;
-      }
-
-      .metric-display, .metric-number {
-        font-size: 2.5rem !important;
-        padding-right: 0.15em !important;
-      }
-
-      /* Pricing Section Mobile Cutoff Fix */
-      .pricing-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.75rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 2.5rem 0 1rem !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-      }
-
-      .pricing-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 2.25rem 1.25rem !important;
-        transform: none !important;
-        margin: 0 !important;
-      }
-
-      .pricing-card:hover {
-        transform: none !important;
-      }
-
-      .pricing-featured {
-        grid-column: auto !important;
-        transform: none !important;
-        margin: 0 !important;
-        box-shadow: 0 0 25px rgba(56, 189, 248, 0.2) !important;
-      }
-
-      .pricing-featured:hover {
-        transform: none !important;
-      }
-
-      /* All Grids Collapse cleanly on mobile */
-      .grid-2, .grid-3, .grid-4, .facts-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-        width: 100% !important;
-      }
-
-      .fact-box {
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-
-      /* Step Timeline Items Mobile */
-      .step-item {
-        padding: 1.25rem 1rem !important;
-        gap: 0.85rem !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-
-      .step-num {
-        min-width: 42px !important;
-        height: 42px !important;
-        padding: 0 0.35rem !important;
-        font-size: 0.88rem !important;
-        border-radius: 9999px !important;
-        flex-shrink: 0 !important;
-      }
-
-      .step-content {
-        min-width: 0 !important;
-      }
-
-      .step-content h3 {
-        font-size: 1.15rem !important;
-      }
-
-      /* Chapter & Guide Cards Mobile */
-      .chapter-card, .card, article.card {
-        padding: 1.35rem 1.15rem !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin-bottom: 1.5rem !important;
-        border-radius: var(--radius-md) !important;
-      }
-
-      .chapter-card h2, .chapter-card h3, .card h2, article.card h2 {
-        font-size: 1.25rem !important;
-        line-height: 1.35 !important;
-      }
-
-      .card h3, article.card h3 {
-        font-size: 1.12rem !important;
-        line-height: 1.35 !important;
-      }
-
-      .card p, article.card p {
-        font-size: 0.95rem !important;
-        line-height: 1.6 !important;
-      }
-
-      /* Guide Components Mobile */
-      .card-icon {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
-        font-size: 1.1rem !important;
-        margin-bottom: 0.85rem !important;
-        border-radius: var(--radius-sm) !important;
-      }
-
-      .quick-answer {
-        padding: 1.25rem 1rem !important;
-        margin: 1.5rem 0 !important;
-        border-radius: var(--radius-md) !important;
-        border-left-width: 3px !important;
-      }
-
-      .quick-answer-title {
-        font-size: 1.05rem !important;
-        gap: 0.5rem !important;
-      }
-
-      .quick-answer-title span {
-        width: 26px !important;
-        height: 26px !important;
-        min-width: 26px !important;
-        font-size: 0.95rem !important;
-      }
-
-      .quick-answer p {
-        font-size: 0.92rem !important;
-        line-height: 1.65 !important;
-      }
-
-      .callout {
-        padding: 1.15rem 1rem !important;
-        margin: 1.25rem 0 !important;
-        border-radius: var(--radius-sm) !important;
-        border-left-width: 3px !important;
-      }
-
-      .callout-title {
-        font-size: 1.02rem !important;
-      }
-
-      .callout p {
-        font-size: 0.9rem !important;
-        line-height: 1.65 !important;
-      }
-
-      .table-wrap {
-        margin: 1.25rem 0 !important;
-        border-radius: var(--radius-sm) !important;
-      }
-
-      th, td {
-        padding: 0.75rem 0.85rem !important;
-        font-size: 0.85rem !important;
-      }
-
-      .breadcrumbs {
-        font-size: 0.8rem !important;
-        gap: 0.35rem !important;
-        margin-bottom: 1rem !important;
-        line-height: 1.4 !important;
-      }
-
-      .metric-pill, .badge {
-        padding: 0.25rem 0.65rem !important;
-        font-size: 0.78rem !important;
-      }
-
-      .logo-text {
-        font-size: 1.12rem !important;
-        gap: 0.28rem !important;
-      }
-
-      .logo-svg {
-        width: 25px !important;
-        height: 25px !important;
-      }
-
-      /* Footer Mobile */
-      .footer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2rem !important;
-      }
-
-      .floating-wa, .floating-whatsapp {
-        bottom: 18px !important;
-        right: 18px !important;
-        width: 52px !important;
-        height: 52px !important;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .logo-text {
-        font-size: 0.96rem !important;
-        gap: 0.22rem !important;
-      }
-      .logo-svg {
-        width: 22px !important;
-        height: 22px !important;
-      }
-    }
-    
+/* ==========================================================================
+   12 Testers For 14 Days - Modern SaaS Light Theme
+   ========================================================================== */
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-alt: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f1f5f9;
   
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --border-focus: #38bdf8;
+  
+  --brand-primary: #0284c7;
+  --brand-hover: #0369a1;
+  --brand-light: #e0f2fe;
+  
+  --accent-green: #16a34a;
+  --accent-green-light: #dcfce7;
+  
+  --accent-amber: #d97706;
+  --accent-amber-light: #fef3c7;
+  
+  --accent-rose: #e11d48;
+  --accent-rose-light: #ffe4e6;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  
+  --container-max: 1200px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-body);
+  background-color: var(--bg-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-hover);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-light);
+  color: var(--brand-hover);
+  border: 1px solid #bae6fd;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+.badge-success {
+  background-color: var(--accent-green-light);
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.badge-amber {
+  background-color: var(--accent-amber-light);
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--brand-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+  display: inline-block;
+}
+
+.pulse-dot-green {
+  background-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-hover);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: var(--text-main) !important;
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-alt);
+  border-color: #cbd5e1;
+  color: var(--brand-primary) !important;
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  background-color: var(--accent-green);
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background-color: #15803d;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: 0.9rem 1.65rem;
+  font-size: 1rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+/* Header & Navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.85rem 0;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 1.15rem;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.logo-text strong {
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.logo-accent {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.logo-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.acl-sublogo {
+  height: 16px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-body);
+  transition: color 0.15s ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-header {
+  max-width: 750px;
+  margin: 0 auto 3rem auto;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-top: 0.5rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4.5rem 0 4rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.trust-item strong {
+  color: var(--text-main);
+}
+
+/* Hero Sidebar Card */
+.hero-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.card-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #15803d;
+  background-color: var(--accent-green-light);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.dot-live {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+}
+
+.hero-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.hero-feature-list li svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--accent-green);
+}
+
+.hero-price-strip {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--brand-primary);
+  line-height: 1.1;
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.stat-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Comparison Boxes */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.compare-card {
+  padding: 2.25rem 1.75rem;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-card.recommended {
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+  position: relative;
+}
+
+.compare-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  font-size: 0.925rem;
+}
+
+.compare-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.5;
+}
+
+/* Timeline Steps (How It Works) */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.step-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.step-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  font-family: var(--font-mono);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-quote {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+
+.reviewer-name {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.15);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -13px;
+  right: 24px;
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.price-val {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.price-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.75rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.5;
+}
+
+/* FAQs */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: #93c5fd;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+  color: var(--brand-hover);
+}
+
+.faq-body {
+  padding: 0 1.5rem 1.35rem;
+  color: var(--text-body);
+  font-size: 0.975rem;
+  line-height: 1.7;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--border-color);
+  padding: 4.5rem 0 2.5rem;
+  color: var(--text-body);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.25fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-desc {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+  line-height: 1.65;
+  margin-top: 1rem;
+  max-width: 340px;
+}
+
+.footer-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--brand-primary);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .compare-grid,
+  .steps-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+  
+  .main-nav.is-open {
+    display: flex;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .nav-cta-wrap {
+    width: 100%;
+  }
+  
+  .nav-cta-wrap .btn {
+    width: 100%;
+  }
+  
+  .stats-grid,
+  .compare-grid,
+  .steps-grid,
+  .reviews-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero-cta-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   </style>
 
   <!-- Structured Data -->
@@ -1606,38 +960,30 @@
   </script>
 </head>
 <body class="guides-page">
-  <!-- Global Announcement Banner -->
-  <div class="top-announcement">
-    <div class="container announcement-inner">
-      <span class="badge badge-accent">2026 Requirement</span>
-      <p class="announcement-text">Personal Google Play accounts require 12 testers opted in for 14 days to apply for production.</p>
-      <a href="/#pricing" class="announcement-link">Get 12 Testers &rarr;</a>
-    </div>
-  </div>
 
-  <!-- Site Navigation Header -->
+  <!-- Site Navigation Header (No unwanted text above) -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-        <svg class="logo-svg" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <linearGradient id="gpLogoGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#38bdf8"/>
-              <stop offset="50%" stop-color="#6366f1"/>
-              <stop offset="100%" stop-color="#818cf8"/>
+              <stop offset="0%" stop-color="#0284c7"/>
+              <stop offset="50%" stop-color="#2563eb"/>
+              <stop offset="100%" stop-color="#4f46e5"/>
             </linearGradient>
             <linearGradient id="gpBadgeGrad" x1="16" y1="16" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#10b981"/>
+              <stop offset="0%" stop-color="#16a34a"/>
               <stop offset="100%" stop-color="#059669"/>
             </linearGradient>
           </defs>
           <path d="M6 5.8C6 4.4 7.5 3.5 8.7 4.2L23.5 13.4C24.7 14.1 24.7 15.9 23.5 16.6L8.7 25.8C7.5 26.5 6 25.6 6 24.2V5.8Z" fill="url(#gpLogoGrad)"/>
-          <circle cx="22" cy="22" r="7.5" fill="#070b14"/>
+          <circle cx="22" cy="22" r="7.5" fill="#ffffff"/>
           <circle cx="22" cy="22" r="6" fill="url(#gpBadgeGrad)"/>
           <path d="M19.2 22L21.2 24L24.8 19.8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div class="logo-text-group">
-          <span class="logo-text"><strong class="logo-title">12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
+          <span class="logo-text"><strong>12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
           <span class="logo-byline">
             <span class="by-text">by</span>
             <img src="/assets/acl-logo.png" alt="AppConsoleLab" class="acl-sublogo" width="144" height="48">
@@ -1645,6 +991,7 @@
         </div>
       </a>
 
+      <!-- Mobile Hamburger Toggle Button -->
       <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" type="button" aria-expanded="false">
         <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -1657,6 +1004,7 @@
         </svg>
       </button>
 
+      <!-- Navigation Menu -->
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="/" class="nav-link">Home</a></li>
@@ -1665,13 +1013,11 @@
           <li><a href="/#reviews" class="nav-link">Reviews</a></li>
           <li><a href="/#faq" class="nav-link">FAQs</a></li>
           <li><a href="/guides/" class="nav-link active">Guides</a></li>
-          <li><a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
-        <div class="nav-cta-wrap" style="display: flex; align-items: center; gap: 0.75rem;">
-          <a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" class="btn btn-whatsapp nav-cta-btn" target="_blank" rel="noopener noreferrer">
-            <span class="pulse-dot"></span>
-            <span class="btn-text-desktop">WhatsApp QA</span>
-            <span class="btn-text-mobile">Chat on WhatsApp</span>
+        <div class="nav-cta-wrap">
+          <a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <span class="pulse-dot-green"></span>
+            <span>Chat on WhatsApp</span>
           </a>
         </div>
       </nav>
@@ -1679,73 +1025,74 @@
   </header>
 
   <main>
-    <header class="hero guides-hero" style="padding: 4rem 0 3rem; text-align: center; position: relative; background: linear-gradient(180deg, #0d1527 0%, #070b14 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-      <div class="container" style="max-width: 950px;">
+    <div class="hero" style="padding: 4rem 0 3rem; text-align: center;">
+      <div class="container" style="max-width: 800px;">
         <div class="badge badge-success" style="margin-bottom: 1.25rem;">
-          <span class="pulse-dot"></span> Developer Documentation Hub &bull; 2026 Play Console Compliance
+          <span class="pulse-dot-green"></span> Developer Guides Hub
         </div>
-        <h1 style="font-size: clamp(1.9rem, 5vw, 3.2rem); font-weight: 800; color: #ffffff; margin-bottom: 1.25rem; letter-spacing: -0.025em; line-height: 1.25;">
-          Google Play Closed Testing Documentation
+        <h1 style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; color: #0f172a; margin-bottom: 1.25rem;">
+          Google Play Closed Testing Guides
         </h1>
-        <p class="lead-text" style="font-size: 1.15rem; color: #94a3b8; line-height: 1.7; max-width: 800px; margin: 0 auto;">
-          In-depth architecture blueprints, policy compliance guides, and rejection recovery tutorials for Android developers navigating <strong>12 testers for 14 days</strong> closed testing.
+        <p class="section-lead" style="margin: 0 auto;">
+          Step-by-step guides, policy walkthroughs, and helpful tips for Android developers navigating Google Play's <strong>12 testers for 14 days</strong> requirement.
         </p>
       </div>
-    </header>
+    </div>
 
-    <div class="container" style="max-width: 1000px; padding-top: 1.5rem;">
+    <div class="container" style="max-width: 950px; padding-top: 1.5rem;">
       <nav class="breadcrumbs" aria-label="Breadcrumbs" style="display: flex; gap: 0.5rem; align-items: center; color: #64748b; font-size: 0.875rem;">
-        <a href="/" style="color: #94a3b8; text-decoration: none;">Home</a>
+        <a href="/" style="color: #64748b; text-decoration: none;">Home</a>
         <span>&rsaquo;</span>
-        <span style="color: #38bdf8;">Guides</span>
+        <span style="color: var(--brand-primary); font-weight: 600;">Guides</span>
       </nav>
     </div>
 
-    <section class="section" style="padding: 3rem 0 5rem;">
-      <div class="container" style="max-width: 1000px;">
-        <!-- Hub Status Card -->
-        <div class="card" style="padding: 2.75rem 2.25rem; border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 1rem; background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(7, 11, 20, 0.95)); text-align: center; margin-bottom: 2.5rem;">
-          <span class="badge badge-primary" style="margin-bottom: 1rem;">Documentation Series (In Preparation)</span>
-          <h2 style="font-size: 1.85rem; color: #ffffff; margin-bottom: 1rem;">12 Testers For 14 Days Documentation Hub</h2>
-          <p style="color: #94a3b8; font-size: 1.1rem; line-height: 1.7; max-width: 720px; margin: 0 auto 2rem;">
-            Our engineering team is actively preparing the complete 2026 series of technical walkthroughs for <strong>12 Testers For 14 Days</strong>. These guides will cover opt-in retention, hardware attestation, Play Integrity, and step-by-step production application answers.
+    <section class="section" style="padding: 2.5rem 0 5rem;">
+      <div class="container" style="max-width: 950px;">
+        
+        <!-- Status Card -->
+        <div class="card" style="padding: 2.75rem 2rem; text-align: center; margin-bottom: 2.5rem; border: 1px solid #bae6fd; background: #f0f9ff;">
+          <span class="badge" style="background: #ffffff; color: var(--brand-primary); margin-bottom: 1rem;">Coming Soon</span>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 1rem;">Guides &amp; Tutorials in Progress</h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 1.75rem;">
+            We are writing a complete series of easy-to-follow tutorials covering track setup, opt-in links, common mistakes to avoid, and sample answers for Google's 7 production questions.
           </p>
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <a href="/" class="btn btn-primary">Return to Homepage</a>
-            <a href="/#pricing" class="btn btn-outline">Explore Testing Packages</a>
-            <a href="https://wa.me/923394001479?text=Hi%2C%20I%20have%20a%20question%20about%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Talk to QA Supervisor</a>
+            <a href="/#pricing" class="btn btn-outline">View Testing Packages</a>
+            <a href="https://wa.me/923394001479?text=Hi%2C%20I%20have%20a%20question%20about%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Ask Us on WhatsApp</a>
           </div>
         </div>
 
         <!-- Planned Topics Grid -->
-        <h3 style="font-size: 1.35rem; color: #f8fafc; margin-bottom: 1.5rem; text-align: center;">Upcoming Guide Categories</h3>
+        <h3 style="font-size: 1.35rem; color: #0f172a; margin-bottom: 1.5rem; text-align: center;">Upcoming Topic Series</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
           
-          <div class="card" style="padding: 1.75rem; border: 1px solid var(--border-color); border-radius: 0.875rem; background: var(--bg-card);">
+          <div class="card" style="padding: 1.75rem;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-              <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">Policy &amp; Mandate</span>
-              <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">Coming Soon</span>
+              <span class="badge badge-amber">Policy &amp; Rules</span>
+              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
             </div>
-            <h4 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.5rem;">Google Play 14-Day Closed Testing Mandate</h4>
-            <p style="font-size: 0.925rem; color: #94a3b8; line-height: 1.6;">Why personal accounts created after Nov 13, 2023 require 12 opted-in testers continuously for 14 days.</p>
+            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Google Play 14-Day Testing Rule</h4>
+            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">Why personal accounts created after Nov 13, 2023 need 12 opted-in testers continuously for 14 days.</p>
           </div>
 
-          <div class="card" style="padding: 1.75rem; border: 1px solid var(--border-color); border-radius: 0.875rem; background: var(--bg-card);">
+          <div class="card" style="padding: 1.75rem;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-              <span class="badge" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3);">Rejection Recovery</span>
-              <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">Coming Soon</span>
+              <span class="badge" style="background: #ffe4e6; color: #e11d48; border-color: #fecdd3;">Rejection Fixes</span>
+              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
             </div>
-            <h4 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.5rem;">Production Access Rejections &amp; Fixes</h4>
-            <p style="font-size: 0.925rem; color: #94a3b8; line-height: 1.6;">How to address "testers were not engaged" feedback and successfully reapply for production access.</p>
+            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Fixing "Testers Were Not Engaged"</h4>
+            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">How to recover from a rejected production request and get approved on your next submission.</p>
           </div>
 
-          <div class="card" style="padding: 1.75rem; border: 1px solid var(--border-color); border-radius: 0.875rem; background: var(--bg-card);">
+          <div class="card" style="padding: 1.75rem;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-              <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">Console Setup</span>
-              <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">Coming Soon</span>
+              <span class="badge badge-success">Console Setup</span>
+              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
             </div>
-            <h4 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.5rem;">Managing Closed Testing Tracks &amp; Opt-In Links</h4>
-            <p style="font-size: 0.925rem; color: #94a3b8; line-height: 1.6;">Step-by-step guide to configuring Google Groups, web opt-in links, and Android app bundle releases.</p>
+            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Setting Up Your Closed Test Track</h4>
+            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">How to configure Google Groups, opt-in web URLs, and publish your Android App Bundle.</p>
           </div>
 
         </div>
@@ -1753,37 +1100,40 @@
     </section>
   </main>
 
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo" aria-label="12 Testers For 14 Days by AppConsoleLab">
-            <svg class="logo-svg" width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
                 <linearGradient id="gpFtrGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#38bdf8"/>
-                  <stop offset="50%" stop-color="#6366f1"/>
-                  <stop offset="100%" stop-color="#818cf8"/>
+                  <stop offset="0%" stop-color="#0284c7"/>
+                  <stop offset="50%" stop-color="#2563eb"/>
+                  <stop offset="100%" stop-color="#4f46e5"/>
                 </linearGradient>
                 <linearGradient id="gpFtrBadge" x1="16" y1="16" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#10b981"/>
+                  <stop offset="0%" stop-color="#16a34a"/>
                   <stop offset="100%" stop-color="#059669"/>
                 </linearGradient>
               </defs>
               <path d="M6 5.8C6 4.4 7.5 3.5 8.7 4.2L23.5 13.4C24.7 14.1 24.7 15.9 23.5 16.6L8.7 25.8C7.5 26.5 6 25.6 6 24.2V5.8Z" fill="url(#gpFtrGrad)"/>
-              <circle cx="22" cy="22" r="7.5" fill="#070b14"/>
+              <circle cx="22" cy="22" r="7.5" fill="#ffffff"/>
               <circle cx="22" cy="22" r="6" fill="url(#gpFtrBadge)"/>
               <path d="M19.2 22L21.2 24L24.8 19.8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <div class="logo-text-group">
-              <span class="logo-text"><strong class="logo-title">12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
+              <span class="logo-text"><strong>12 Testers</strong> <span class="logo-accent">For 14 Days</span></span>
               <span class="logo-byline">
                 <span class="by-text">by</span>
                 <img src="/assets/acl-logo.png" alt="AppConsoleLab" class="acl-sublogo" width="144" height="48">
               </span>
             </div>
           </a>
-          <p class="footer-desc">Professional Google Play closed testing cohort service for personal developer accounts. We provide real Android testers active across 14 consecutive days to ensure smooth production access approval.</p>
+          <p class="footer-desc">
+            Professional Google Play closed testing cohort service for personal developer accounts. We provide real Android testers active across 14 consecutive days to ensure smooth production access approval.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -1800,8 +1150,8 @@
         <div class="footer-col">
           <h4 class="footer-heading">Compliance</h4>
           <ul class="footer-links">
-            <li><a href="/#guide">12 Testers Mandate</a></li>
-            <li><a href="/#compare">Fleet vs Bot Swaps</a></li>
+            <li><a href="/#guide">14-Day Rule</a></li>
+            <li><a href="/#compare">Real Phones vs Bots</a></li>
             <li><a href="/#why-price">Why $20 Fee</a></li>
             <li><a href="/#about">About Us</a></li>
           </ul>
@@ -1810,7 +1160,7 @@
         <div class="footer-col">
           <h4 class="footer-heading">Support</h4>
           <ul class="footer-links">
-            <li><a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" target="_blank" rel="noopener noreferrer">WhatsApp QA Desk</a></li>
+            <li><a href="https://wa.me/923394001479?text=Hi%2C%20I%20need%20help%20with%2012%20testers%20for%2014%20days" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
             <li><a href="mailto:support@appconsolelab.com">support@appconsolelab.com</a></li>
             <li><a href="https://www.trustpilot.com/review/appconsolelab.com" target="_blank" rel="noopener noreferrer">Trustpilot Reviews</a></li>
           </ul>
@@ -1823,6 +1173,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var toggle = document.getElementById('menuToggle');
