@@ -2062,43 +2062,53 @@ a:hover {
   <!-- Structured Data -->
 
   <script type="application/ld+json">
-
   {
-
     "@context": "https://schema.org",
-
-    "@type": "BreadcrumbList",
-
-    "itemListElement": [
-
+    "@graph": [
       {
-
-        "@type": "ListItem",
-
-        "position": 1,
-
-        "name": "Home",
-
-        "item": "https://12testers-14-days.github.io/"
-
+        "@type": "CollectionPage",
+        "@id": "https://12testers-14-days.github.io/guides/#collection",
+        "name": "Google Play Closed Testing Guides",
+        "description": "Comprehensive guides and walkthroughs for Google Play's 12 testers for 14 days closed testing requirement.",
+        "url": "https://12testers-14-days.github.io/guides/",
+        "hasPart": [
+          {
+            "@type": "TechArticle",
+            "name": "How to Quickly Find 12 Testers For 14 Days For Your Google Play App",
+            "url": "https://12testers-14-days.github.io/guides/how-to-quickly-find-12-testers-for-14-days-for-your-google-play-app/"
+          },
+          {
+            "@type": "TechArticle",
+            "name": "The Easiest Way to Solve Google Play's 12 Testers for 14 Days Problem",
+            "url": "https://12testers-14-days.github.io/guides/the-easiest-way-to-solve-google-plays-12-testers-for-14-days-problem/"
+          },
+          {
+            "@type": "TechArticle",
+            "name": "Bypass the Wait: How to Pass Google Play Closed Testing in 14 Days",
+            "url": "https://12testers-14-days.github.io/guides/bypass-the-wait-how-to-pass-google-play-closed-testing-in-14-days/"
+          }
+        ]
       },
-
       {
-
-        "@type": "ListItem",
-
-        "position": 2,
-
-        "name": "Guides",
-
-        "item": "https://12testers-14-days.github.io/guides/"
-
+        "@type": "BreadcrumbList",
+        "@id": "https://12testers-14-days.github.io/guides/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://12testers-14-days.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://12testers-14-days.github.io/guides/"
+          }
+        ]
       }
-
     ]
-
   }
-
   </script>
 
 </head>
@@ -2275,100 +2285,95 @@ a:hover {
 
         
 
-        <!-- Status Card -->
+        <!-- Published Guides Section -->
+        <h2 style="font-size: 1.85rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem; text-align: center;">Featured Closed Testing Guides</h2>
+        <p style="text-align: center; color: #64748b; font-size: 1.05rem; margin-bottom: 2.5rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+          In-depth tutorials and production access walkthroughs to help you satisfy Google Play's 12 testers for 14 days requirement without delays.
+        </p>
 
-        <div class="card" style="padding: 2.75rem 2rem; text-align: center; margin-bottom: 2.5rem; border: 1px solid #bae6fd; background: #f0f9ff;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;">
 
-          <span class="badge" style="background: #ffffff; color: var(--brand-primary); margin-bottom: 1rem;">Coming Soon</span>
+          <!-- Guide 1 -->
+          <a href="/guides/how-to-quickly-find-12-testers-for-14-days-for-your-google-play-app/" style="text-decoration: none; color: inherit; display: block;" class="card guide-card">
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 14px; padding: 1.75rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                  <span class="badge badge-success"><span class="pulse-dot-green"></span> Strategy Guide</span>
+                  <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">12 min read</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem; line-height: 1.35;">
+                  How to Quickly Find 12 Testers For 14 Days For Your Google Play App
+                </h3>
+                <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+                  Compare recruiting channels, learn why you must recruit 16-20 testers instead of 12, and follow our tested 14-day schedule to avoid counter resets.
+                </p>
+              </div>
+              <div style="font-weight: 700; color: var(--brand-primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem;">
+                Read Full Guide <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
 
-          <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 1rem;">Guides &amp; Tutorials in Progress</h2>
+          <!-- Guide 2 -->
+          <a href="/guides/the-easiest-way-to-solve-google-plays-12-testers-for-14-days-problem/" style="text-decoration: none; color: inherit; display: block;" class="card guide-card">
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 14px; padding: 1.75rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                  <span class="badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Turnkey Solution</span>
+                  <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">10 min read</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem; line-height: 1.35;">
+                  The Easiest Way to Solve Google Play's 12 Testers for 14 Days Problem
+                </h3>
+                <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+                  Eliminate tester dropouts and same-network Wi-Fi flags. Discover how dedicated physical Android cohorts pass review in a single 14-day cycle.
+                </p>
+              </div>
+              <div style="font-weight: 700; color: var(--brand-primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem;">
+                Read Full Guide <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
 
-          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 1.75rem;">
-
-            We are writing a complete series of easy-to-follow tutorials covering track setup, opt-in links, common mistakes to avoid, and sample answers for Google's 7 production questions.
-
-          </p>
-
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-
-            <a href="/" class="btn btn-primary">Return to Homepage</a>
-
-            <a href="/#pricing" class="btn btn-outline">View Testing Packages</a>
-
-            <a href="https://wa.me/923394001479?text=Hi%2C%20I%20have%20a%20question%20about%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Ask Us on WhatsApp</a>
-
-          </div>
+          <!-- Guide 3 -->
+          <a href="/guides/bypass-the-wait-how-to-pass-google-play-closed-testing-in-14-days/" style="text-decoration: none; color: inherit; display: block;" class="card guide-card">
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 14px; padding: 1.75rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                  <span class="badge" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">Approval Blueprint</span>
+                  <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">14 min read</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem; line-height: 1.35;">
+                  Bypass the Wait: How to Pass Google Play Closed Testing in 14 Days
+                </h3>
+                <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+                  Bypass multi-month review loops. Learn the 5 hidden review checkpoints, why pushing a mid-test update works, and how to answer the 7 questionnaire prompts.
+                </p>
+              </div>
+              <div style="font-weight: 700; color: var(--brand-primary); font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem;">
+                Read Full Guide <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
 
         </div>
 
-
-
-        <!-- Planned Topics Grid -->
-
-        <h3 style="font-size: 1.35rem; color: #0f172a; margin-bottom: 1.5rem; text-align: center;">Upcoming Topic Series</h3>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-
-          
-
-          <div class="card" style="padding: 1.75rem;">
-
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-
-              <span class="badge badge-amber">Policy &amp; Rules</span>
-
-              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
-
-            </div>
-
-            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Google Play 14-Day Testing Rule</h4>
-
-            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">Why personal accounts created after Nov 13, 2023 need 12 opted-in testers continuously for 14 days.</p>
-
+        <!-- Help & CTA Banner -->
+        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-radius: 16px; padding: 2.5rem 2rem; text-align: center; box-shadow: var(--shadow-md);">
+          <span class="badge badge-success" style="margin-bottom: 1rem;">Need Testers Today?</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem;">Get 20+ Real Android Testers Active in 24 Hours</h3>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; max-width: 640px; margin: 0 auto 1.75rem;">
+            Don't risk counter resets or rejection loops. We provide real Android users on physical smartphones with continuous 14-day engagement and 100% money-back protection.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/#pricing" class="btn btn-primary">View Packages ($20 - $39)</a>
+            <a href="https://wa.me/923394001479?text=Hi%2C%20I%20have%20a%20question%20about%2012%20testers%20for%2014%20days" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <span>💬 Chat on WhatsApp</span>
+            </a>
           </div>
-
-
-
-          <div class="card" style="padding: 1.75rem;">
-
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-
-              <span class="badge" style="background: #ffe4e6; color: #e11d48; border-color: #fecdd3;">Rejection Fixes</span>
-
-              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
-
-            </div>
-
-            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Fixing "Testers Were Not Engaged"</h4>
-
-            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">How to recover from a rejected production request and get approved on your next submission.</p>
-
-          </div>
-
-
-
-          <div class="card" style="padding: 1.75rem;">
-
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-
-              <span class="badge badge-success">Console Setup</span>
-
-              <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coming Soon</span>
-
-            </div>
-
-            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.5rem;">Setting Up Your Closed Test Track</h4>
-
-            <p style="font-size: 0.925rem; color: #64748b; line-height: 1.6;">How to configure Google Groups, opt-in web URLs, and publish your Android App Bundle.</p>
-
-          </div>
-
-
-
         </div>
 
       </div>
-
     </section>
 
   </main>
