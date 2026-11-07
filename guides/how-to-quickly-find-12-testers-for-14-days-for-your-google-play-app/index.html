@@ -726,7 +726,243 @@ tr:nth-child(even) td {
     gap: 2rem;
   }
 }
-  </style>
+  
+/* --- Pricing Section Styles --- */
+.pricing-section {
+  margin: 3.5rem 0 2.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg, 16px);
+  padding: 2.25rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.7rem;
+  border-radius: 9999px;
+}
+
+.price-val {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.price-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1.75rem;
+  padding: 0;
+  font-size: 0.925rem;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.45;
+  color: var(--text-body);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--brand-primary);
+  color: var(--brand-primary);
+  background: transparent;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm, 8px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--brand-light, #e0f2fe);
+}
+
+/* --- Fixed Floating Bottom CTA Bar --- */
+.fixed-floating-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+  z-index: 998;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.fixed-cta-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.fixed-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.fixed-cta-badge {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.fixed-cta-text {
+  color: #0f172a;
+  font-size: 0.925rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fixed-cta-action {
+  flex-shrink: 0;
+}
+
+.fixed-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm, 8px);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* --- Floating WhatsApp Button --- */
+.floating-wa {
+  position: fixed;
+  bottom: 75px;
+  right: 22px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  z-index: 999;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+}
+
+.floating-wa:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  background: #20bd5a;
+}
+
+/* Body bottom buffer for fixed bar */
+body {
+  padding-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .fixed-cta-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .fixed-cta-text {
+    white-space: normal;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+  .fixed-cta-content {
+    justify-content: center;
+  }
+  .fixed-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .floating-wa {
+    bottom: 95px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+  body {
+    padding-bottom: 110px;
+  }
+}
+
+</style>
 
   <!-- JSON-LD Structured Data: TechArticle, BreadcrumbList, FAQPage -->
   <script type="application/ld+json">
@@ -1162,6 +1398,115 @@ tr:nth-child(even) td {
         </ol>
 
         <!-- FAQ Section -->
+        
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+          <div class="pricing-section-header" style="text-align: center; margin-bottom: 2rem;">
+            <div class="badge" style="display: inline-block; background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; font-size: 0.785rem; font-weight: 700; padding: 0.3rem 0.85rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Official Packages</div>
+            <h2 style="font-size: 2rem; color: #0f172a; font-weight: 800; margin-bottom: 0.75rem;">One Cycle. Complete Approval.</h2>
+            <p style="color: #64748b; font-size: 1.05rem; max-width: 650px; margin: 0 auto 1.5rem; line-height: 1.6;">
+              Select the plan that fits your release complexity. To view full package details and place your order, visit our official website: 
+              <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=article_quickly_find_12_testers_pricing_header" target="_blank" rel="noopener noreferrer" style="color: var(--brand-primary); font-weight: 700; text-decoration: underline;">https://appconsolelab.com</a>
+            </p>
+          </div>
+
+          <!-- Official Website Notice Banner -->
+          <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 0 auto 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.95rem; color: var(--text-body); margin: 0; line-height: 1.5;">
+              <strong>Official Ordering:</strong> Visit our official website at <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=article_quickly_find_12_testers_pricing_banner" target="_blank" rel="noopener noreferrer" style="color: var(--brand-primary); font-weight: 700; text-decoration: underline;">appconsolelab.com</a> for instant onboarding, dedicated account supervisor assignment, and 100% money-back guarantee protection.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Basic Plan ($20) -->
+            <div class="pricing-card">
+              <div>
+                <span class="badge" style="background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 9999px; text-transform: uppercase;">Starter Package</span>
+                <h3 style="font-size: 1.5rem; color: #0f172a; margin-top: 0.5rem; margin-bottom: 0.35rem;">Basic</h3>
+                <p style="color: #64748b; font-size: 0.925rem; line-height: 1.5;">
+                  Essential closed testing with real testers and guaranteed approval.
+                </p>
+                <div style="margin: 1.25rem 0;">
+                  <span style="font-size: 1.1rem; text-decoration: line-through; color: #94a3b8; margin-right: 0.5rem;">$30</span>
+                  <span class="price-val">$20</span>
+                  <span class="price-sub">per release / one-time</span>
+                </div>
+                <ul class="pricing-features">
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>25 Real Human Testers</strong></span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Production Access Guarantee</strong></span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Dedicated Account Supervisor</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>14-Day Closed Testing</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Detailed Feedback &amp; Bug analysis</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>UI/UX &amp; App Flow Testing Report</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Tested on 25+ Real Android Devices</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>2 Days of Additional Testing</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Up To 10 Minutes Testing Per Device Daily</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>High-End Android Devices (Android 7&ndash;16)</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Monitoring (Screenshots Included)</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Bug Reports With Screenshot Evidence</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Private Tester Feedback on Google Play</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Basic Play Store Policy Compliance Check</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Performance &amp; UI Testing With Suggestions</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Consistent Tester Engagement Throughout 14 Days</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Final Testing Completion Report</span></li>
+                </ul>
+              </div>
+              <div style="margin-top: 1.5rem;">
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.65rem 0.85rem; font-size: 0.825rem; color: #166534; font-weight: 600; text-align: center; margin-bottom: 1rem;">
+                  Get Production Access &mdash; Or Your Money Back!
+                </div>
+                <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=article_quickly_find_12_testers_pricing_basic" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; text-align: center; display: block;">
+                  Visit Official Website &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Premium Plan ($40) -->
+            <div class="pricing-card featured">
+              <span class="pricing-badge">Most Popular</span>
+              <div>
+                <span class="badge" style="background: #dcfce7; color: #166534; border: 1px solid #86efac; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 9999px; text-transform: uppercase;">Comprehensive Package</span>
+                <h3 style="font-size: 1.5rem; color: #0f172a; margin-top: 0.5rem; margin-bottom: 0.35rem;">Premium</h3>
+                <p style="color: #64748b; font-size: 0.925rem; line-height: 1.5;">
+                  Maximum safety buffer and in-depth bug analysis for serious commercial apps.
+                </p>
+                <div style="margin: 1.25rem 0;">
+                  <span style="font-size: 1.1rem; text-decoration: line-through; color: #94a3b8; margin-right: 0.5rem;">$60</span>
+                  <span class="price-val" style="color: var(--brand-primary);">$40</span>
+                  <span class="price-sub">per release / one-time</span>
+                </div>
+                <ul class="pricing-features">
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>50 Real Human Testers</strong></span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span><strong>Production Access Guarantee</strong></span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Senior Account Supervisor</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Extended 20-Day Closed Testing</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Advanced Feedback &amp; Bug Analysis</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Dedicated App Specialist</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Tested on 50+ Real Android Devices</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Comprehensive UI/UX &amp; User Flow Testing</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Up To 30 Minutes Testing Per Device Daily</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>High-End Android Devices (Android 7&ndash;16)</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Monitoring With Video Evidence</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Crash &amp; ANR Logs With Fix Suggestions</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Bug Reports With Recording Evidence</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Step-by-Step Bug Reproduction Details</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Installation, Update &amp; First-Launch Testing</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Performance Observations &amp; Optimization Suggestions</span></li>
+                  <li><span style="color: #16a34a; font-weight: 700;">&#10003;</span> <span>Detailed Final Testing &amp; Play Store Compliance Report</span></li>
+                </ul>
+              </div>
+              <div style="margin-top: 1.5rem;">
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.65rem 0.85rem; font-size: 0.825rem; color: #166534; font-weight: 600; text-align: center; margin-bottom: 1rem;">
+                  Get Production Access &mdash; Or Your Money Back!
+                </div>
+                <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=article_quickly_find_12_testers_pricing_premium" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">
+                  Visit Official Website &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="faq-section" id="faq">
           <h2 class="faq-title">Frequently Asked Questions About Finding 12 Testers</h2>
 
@@ -1328,5 +1673,30 @@ tr:nth-child(even) td {
       }
     });
   </script>
+
+  <!-- Fixed Floating Bottom CTA Bar -->
+  <div class="fixed-floating-cta-bar" id="fixedFloatingCta">
+    <div class="fixed-cta-container">
+      <div class="fixed-cta-content">
+        <span class="fixed-cta-badge">100% Pass Guarantee</span>
+        <p class="fixed-cta-text">
+          Looking for 12 reliable Google Play testers? Skip the search and deploy our verified physical Android testing fleet.
+        </p>
+      </div>
+      <div class="fixed-cta-action">
+        <a href="https://appconsolelab.com/?ref=12testers-14-days.github.io&amp;utm_source=12testers-14-days.github.io&amp;utm_medium=referral&amp;utm_campaign=floating_cta_quickly_find_12_testers" target="_blank" rel="noopener noreferrer" class="btn btn-primary fixed-cta-btn">
+          Get 12 Testers Now &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923394001479?text=Hi%2C%20I%20have%20a%20question%20about%20Google%20Play%2012%20testers" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.56 0 8.25 3.69 8.25 8.24 0 4.56-3.69 8.25-8.25 8.25-1.46 0-2.88-.38-4.13-1.11l-.3-.18-3.08.81.82-3-.2-.31a8.16 8.16 0 0 1-1.25-4.46c0-4.55 3.69-8.24 8.24-8.24zm4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
