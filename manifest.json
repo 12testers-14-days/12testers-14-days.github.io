@@ -1,0 +1,16 @@
+{
+  "name": "12 Testers For 14 Days",
+  "short_name": "12Testers14Days",
+  "description": "Real Android device closed testing cohorts for Google Play 14-day approval.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#38bdf8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

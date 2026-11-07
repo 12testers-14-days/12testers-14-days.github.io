@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://12testers-14-days.github.io/sitemap.xml
