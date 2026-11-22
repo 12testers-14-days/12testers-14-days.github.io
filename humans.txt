@@ -1,0 +1,9 @@
+/* TEAM */
+Brand: 12 Testers For 14 Days (by AppConsoleLab)
+Site: https://12testers-14-days.github.io/
+Contact: support@appconsolelab.com
+Location: Global Remote Android QA Fleet (40+ Countries)
+
+/* SITE */
+Last update: 2026-11-22
+Standards: HTML5, CSS3, Schema.org JSON-LD, WCAG AA
